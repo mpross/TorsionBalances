@@ -1,0 +1,179 @@
+\documentclass{book}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+
+\begin{document}
+
+\title{Torsion Balances:\\An Experimenter's Handbook}
+\author{M.P.Ross for the E\"ot-Wash Group \\ University of Washington}
+
+\maketitle
+
+\tableofcontents
+
+\setcounter{chapter}{-1}
+\chapter{History}
+\chapter{Introduction}
+\section{Simple Torsion Balance}\label{simple}
+
+\quad A torsion balance, in its simplest incarnation, is just an extended body, called the "pendulum," suspended from a thin wire, the "torsion fiber." This forms a rotational spring-mass system which has two intrinsic parameter (ignoring loss terms): the moment of inertia, $I$, and the torsional spring constant, $\kappa$. The primary degree of freedom of this system is rotation of the pendulum around the axis of the fiber which we call torsion. See Section~\ref{swing} for discussion of other degrees of freedom.
+
+Restricting ourselves to only the torsional degree of freedom gives us:
+\begin{equation}
+I \ddot{\theta}(t)=\sum_i \tau_i(t)
+\end{equation}
+where $\theta$ is the angle of the pendulum about vertical, $t$ is time, and $\tau_i$ are the torques acting on the pendulum. Here we use Newton's notation for derivatives with respect to time, $\dot{x}=\partial x/\partial t$ and $\ddot{x}=\partial^2 x/\partial t^2$. 
+
+\begin{figure}[!h]
+\begin{centering}
+\includegraphics[width=0.65\textwidth]{SimpleTorsionBalance.pdf}
+\caption{A simple torsion balance system.}\label{simpleFig}
+\end{centering}
+\end{figure}
+
+From Hooke's law, the torsional spring adds a restoring torque that follows:
+\begin{equation}
+\tau_{\text{spring}}(t) = -\kappa (\theta(t)-\theta_0)
+\end{equation}
+where $\theta_0$ is the equilibrium angle of the torsion balance. For most situations this is the dominant torque acting on the pendulum.
+
+Due to historical reasons, the classical example of a torsion balance is a dumb-bell shaped pendulum suspended from a thin metal fiber, shown in Figure~\ref{simpleFig}. The pendulum is formed by a massless rod with two equal mass "test masses" attached to each end. The torsion fiber is then attached to the rod at equal distance to each test mass. This provides a prototypical model of a torsion balance which we will analyze in detail. Modern torsional balance apparatus typically have pendulums with more complex geometry and may have multiple suspension stages. 
+
+\section{Loss Terms}
+
+There are two primary sources of loss in torsion balances: external and internal damping. External damping, sometimes called velocity damping, is caused by external forces acting on the pendulum that are proportional to the angular velocity of the pendulum, such as air friction. Internal damping, on the other hand, is caused by energy dissipation internal to the torsion fiber.
+
+External damping adds a torque on the pendulum that is proportional to the angular velocity of the pendulum:
+\begin{equation}
+\tau_{\text{vel}}(t) = -\gamma \dot{\theta}(t)
+\end{equation}
+where $\gamma$ is the damping constant. Where as internal damping can be modeled by a complex spring constant:
+\begin{equation}
+\tau_{\text{spring}}(t) =  -\kappa(1+i\delta) \big(\theta(t)-\theta_0\big)
+\end{equation}
+where $\delta$ is the dimensionless internal loss parameter.
+
+For most modern torsion balances, external damping is engineered away and is thus much smaller than the internal damping. Thus we will shelve discussion of external damping until Section \ref{gas}
+
+\section{Equations of Motion}
+
+\quad As mentioned in Section~\ref{simple}, the simple torsion balance is described with two primary parameters: the moment of inertia, $I$, which is determined by the pendulum geometry, and the torsional spring constant, $\kappa$, which is determined by the torsion fiber size and material. Adding in internal damping, this system obeys the following equation of motion:
+\begin{equation}
+I~\ddot{\theta}(t)+\kappa(1+i\delta)  \big(\theta(t)-\theta_0\big) = \tau_{\text{ext}}(t) \label{eom}
+\end{equation}
+where $\tau_{\text{ext}}(t)$ is the sum of all exterior torques acting on the pendulum.
+
+If we assume a harmonic solution, $\theta(t)=A~e^{i\omega t}$, we can transform Equation~\ref{eom} into the Fourier domain to yield:
+\begin{equation}
+\big(-I\omega^2+\kappa(1+i\delta) \big) \tilde{\theta}(\omega)= \tau_{\text{ext}}(\omega) \label{four}
+\end{equation}
+It is convenient to define two parameters here: the resonant frequency, $\omega_0=\sqrt{\kappa/I}$, and the quality factor, $Q=\frac{1}{\delta}$. Equation \ref{four} can then be rearranged to:
+
+\begin{equation}
+ \tilde{\theta}(\omega)= \frac{\tau_{\text{ext}}(\omega)}{\kappa}\frac{1}{1-\frac{\omega^2}{\omega_0^2} +i/Q} \label{four2}
+\end{equation}
+
+\section{Response Function}\label{resp}
+
+\quad The second dimensionless factor in Equation \ref{four2} is traditionally called the response function or transfer function of the system. It controls the amount of angle the pendulum gets for a given torque as a function of frequency. 
+
+\begin{equation}
+R(\omega)= \frac{1}{1-\frac{\omega^2}{\omega_0^2} +i/Q} \label{four3}
+\end{equation}
+
+For a pendulum with no damping, $Q\rightarrow\infty$, the response function has three distinct features. Below the resonant frequency, $\omega << \omega_0$, the response goes to unity. Above the resonant frequency, $\omega >> \omega_0$, the response function follows $R(\omega)=-\omega_0^2/\omega^2$ causing effect of high frequency torques to decrease as $1/\omega^2$. At the resonant frequency, $\omega=\omega_0$ the response goes to infinity. This causes the motion at this frequency to grow without limit.
+
+With damping, the response has a similar structure albeit with different amplitudes. Namely at the resonance the response does not approach infinity but instead $R(\omega)=-i Q$. The quality factor, hence the amount of damping, limits the maximum resonant motion for a given input torque. 
+
+\begin{figure}[!h]
+\begin{centering}
+\includegraphics[width=\textwidth]{ResponseFunction.pdf}
+\caption{The response function for a simple torsion balance system with a resonance of $\omega_0=2\pi\ (0.1 \text{ Hz})$.}\label{respPlot}
+\end{centering}
+\end{figure}
+
+The full response function is plotted in Figure \ref{respPlot} for a variety of quality factors and a resonant frequency of 0.1 Hz. As can be seen, below the resonance the magnitude of the response approaches unity with a nearly zero phase for most values of $Q$. There's a peak at the resonant frequency whose amplitude is strongly dependent on $Q$ and the phase undergoes a rapid transition. Above the resonance the magnitude follows $\sim1/\omega^2$ with a phase of $180^\circ$ independent of $Q$-value. Note that a phase of $180^\circ$ is equivalent to a negative value.
+
+
+\chapter{Mechanics}
+\section{Torque Sensing}
+
+\quad For many experiments, the primary use of a torsion balance is to sense weak torques acting on the pendulum. In this mode, the measurements of the angle of the pendulum is converted to torque by rearranging Equation \ref{four2}:
+\begin{equation}
+\tau_{\text{ext}} (\omega)= \frac{\kappa\ \tilde{\theta}(\omega)}{R(\omega)} \label{torq}
+\end{equation}
+
+If we assume a frequency independent angle spectrum, $\tilde{\theta}(\omega)$, (which is unrealistic but a rough approximation of spectra arising from readout noise, Section \ref{readout}) then the corresponding torque spectrum will follow the inverse of the pendulum response function, $R(\omega)$. An example of such a spectrum is shown in Figure \ref{torqSpec}. This spectrum has very similar features at the response discussed in Section \ref{resp}. However, instead of having a peak at the resonant frequency it has a dip and above the resonant frequency the torque spectrum rises as $\sim \omega^2$. 
+
+These features are the first example we've seen that expresses the significance of the frequency of signal of interest in designing an experiment. A careful experimenter would design an apparatus to minimize the noise at the frequency of interest within practical limits. For example, the model apparatus described by Figure \ref{torqSpec} would not be ideal to run an experiment with a signal at 1 Hz but would be well suited for a signal at 10 mHz since the noise level is differs by a factor of 100 between these two frequencies. This is a common consideration in torsion balance design that will reoccur throughout this work.
+
+\begin{figure}[!h]
+\begin{centering}
+\includegraphics[width=\textwidth]{TorqueSpectrum.pdf}
+\caption{Example torque spectrum assuming a frequency independent angle spectrum $\tilde{\theta}(\omega) = 1\ \text{nrad}/\sqrt{\text{Hz}}$ amplitude, $\kappa=10^{-8}\ \text{N m/rad}$, $Q=10$, and $\omega_0=2\pi\ (0.1 \text{ Hz})$ .}\label{torqSpec}
+\end{centering}
+\end{figure}
+\pagebreak
+\section{Inertial Sensing}
+
+\quad A relatively newer use of torsion balances is for inertial sensing. Where as in the previous section we discussed torques acting on the pendulum, for inertial sensing the pendulum acts as an inertial proof mass. The goal of this mode is to measure the angular motion of structure that the pendulum is suspended from. These sorts of measurements have a wide range of application, from rotational seismology and seismic isolation to guidance systems and navigation. 
+
+A system whose support structure is allowed to move can be modeled with Equation \ref{eom} by allowing $\theta_0$ to vary in time:
+
+\begin{equation}
+I~\ddot{\theta}(t)+\kappa(1+i\delta)  \big(\theta(t)-\theta_0(t)\big) = \tau_{\text{ext}}(t) \label{inert}
+\end{equation}
+
+Since the motion of the support is what we want to measure, Equation \ref{inert} can be transformed in the Fourier domain and rearranged to yield:
+
+\begin{equation}
+\tilde{\theta}(\omega)=\frac{1+i/Q}{1-\omega^2/\omega_0^2+i/Q}\ \tilde{\theta_0}(\omega) \label{inert2}
+\end{equation}
+
+However, angular readout systems do not sense the inertial angle of the pendulum but instead measure the difference in angle between the support and the pendulum. (In all other sections we assume the support is inertial.) Thus, the measured angle is:
+
+\begin{equation}
+\tilde{\theta_a}(\omega)=\tilde{\theta}(\omega)-\tilde{\theta}_0(\omega) \label{inert3}
+\end{equation}
+
+Combining Equations \ref{inert2} and \ref{inert3} yields:
+
+\begin{equation}
+\tilde{\theta}_0(\omega)=\frac{\omega_0^2}{\omega^2}\ \frac{1}{R(\omega)}\ \tilde{\theta}_a(\omega) \label{inert4}
+\end{equation}
+
+At first glance, Equation \ref{inert4} looks very similar to the angle response to torque, Equation \ref{four2}. However, the extra factor of $\omega^2/\omega_0^2$ mirrors the features onto opposite sides of the resonance. For a frequency independent measured angle spectrum, the inertial angle spectrum will follow $\sim1/\omega^2$ below the resonance while above it flattens to approach the measured angle spectrum. Figure \ref{inertSpec} shows an example of such a spectrum which displays the same features as Figure \ref{torqSpec} but mirrored about the resonance frequency.
+
+\begin{figure}[!h]
+\begin{centering}
+\includegraphics[width=\textwidth]{InertialSpectrum.pdf}
+\caption{Example inertial angle spectrum assuming a frequency independent measured angle spectrum $\tilde{\theta_a}(\omega) = 1\ \text{nrad}/\sqrt{\text{Hz}}$ amplitude, $Q=10$, and $\omega_0=2\pi\ (0.1 \text{ Hz})$.}\label{inertSpec}
+\end{centering}
+\end{figure}
+
+Due to the features of Equation \ref{inert4}, an inertial sensing apparatus achieves its best performance above the resonant frequency and quickly looses sensitively below it. Thus lowering the resonant frequency increases the band of interest.
+
+\section{Fiber Selection} \label{fiber}
+\section{Pendulum Design}
+
+\chapter{Complications}
+\section{Swing Modes} \label{swing}
+\section{Centrifugal Force}
+\section{Multiple Pendulums}
+
+\chapter{Noise Sources and Mitigation}
+\section{Thermal Noise} \label{thermal}
+\section{Readout Noise}\label{readout}
+\section{Seismic Motion}
+\section{Electrostatic Couplings}
+\section{Magnetic Noise}
+\section{Gas Damping} \label{gas}
+\section{Gravity Gradients}
+
+\chapter{Case Study Experiments}
+\section{Inverse Square Law}
+\section{Equivalence Principle}
+\section{Gravitational Wave Detection}
+\end{document}
