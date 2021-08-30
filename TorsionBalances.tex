@@ -3,6 +3,7 @@
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{graphicx}
+\usepackage[paperwidth=5in, paperheight=8in]{geometry}
 
 \begin{document}
 
@@ -43,7 +44,7 @@ Due to historical reasons, the classical example of a torsion balance is a dumb-
 
 \section{Loss Terms}
 
-There are two primary sources of loss in torsion balances: external and internal damping. External damping, sometimes called velocity damping, is caused by external forces acting on the pendulum that are proportional to the angular velocity of the pendulum, such as air friction. Internal damping, on the other hand, is caused by energy dissipation internal to the torsion fiber.
+\quad There are two primary sources of loss in torsion balances: external and internal damping. External damping, sometimes called velocity damping, is caused by external forces acting on the pendulum that are proportional to the angular velocity of the pendulum, such as air friction. Internal damping, on the other hand, is caused by energy dissipation internal to the torsion fiber.
 
 External damping adds a torque on the pendulum that is proportional to the angular velocity of the pendulum:
 \begin{equation}
@@ -156,6 +157,48 @@ At first glance, Equation \ref{inert4} looks very similar to the angle response 
 Due to the features of Equation \ref{inert4}, an inertial sensing apparatus achieves its best performance above the resonant frequency and quickly looses sensitively below it. Thus lowering the resonant frequency increases the band of interest.
 
 \section{Fiber Selection} \label{fiber}
+
+\quad Although it is easy to think of the torsion fiber as a minor part of the torsion balance system, manufacturing the optimal fiber for a given experiment is an art in itself. There are two primary optimizations when designing a torsion fiber: minimizing the $\kappa$ of the fiber and maximizing the $Q$. These are not necessarily orthogonal and many design alterations will drastically change both parameters. 
+
+There is generally three parameters that can be adjusted in a fiber design: the length of the fiber, $l$, the cross-sectional radius\footnote{Here we're assuming a circular cross-section but many fibers have more complex geometries which must be accounted for.}, $r$, and the material. To optimize these parameters, one usually uses the following procedure. First, find out the maximum length that can fit in the given apparatus and use that length of fiber. Then choose a material based on the requirements of the experiment, what is readily available to purchase or manufacture, and which material will give the highest $Q$. Then minimize the fiber radius until the weight of the pendulum is close to the breaking strength of the fiber (with a healthy safety factor to minimize break-ability). This can iterated through multiple times along with various apparatus changes (chamber height, charge mitigation, etc.) to achieve a near optimal set-up. 
+
+Experimenter's are not left to blindly search for optimal parameters but are instead informed by vast troves of theoretical and experimental information much of which was produced by the engineering communities. The dependence of $\kappa$ on the geometry and material choice can be readily calculated. For a fiber with uniform cross-section\cite{hibbeler2003mechanics}:
+\begin{equation}
+\kappa = \mu \frac{J}{l} 
+\end{equation}
+where $\mu$ is the shear modulus of the material, $J$ is the torsional constant of the material, and $l$ is the length of the fiber. The shear modulus depends on the material and temperature whereas the torsional constant only depends on the cross-sectional geometry of the fiber. Assuming a circular cross-section this becomes:
+\begin{equation}
+\kappa = \mu \frac{\pi r^4}{2 l} \label{kappa}
+\end{equation}
+where $r$ is the cross-sectional radius of the fiber. Equation \ref{kappa} shows the drastic dependence of $\kappa$ on the radius of the fiber and to a lesser extent the length. The value of the shear modulus, $\mu$, for a given material is typically looked-up in various engineering references. Table \ref{ShearTable} gives the values for a selection of materials typically used in torsion balance apparatus.
+
+
+\begin{center}		
+	\begingroup
+	\setlength{\tabcolsep}{10pt} % Default value: 6pt
+	\renewcommand{\arraystretch}{1.5} % Default value: 1
+	\begin{table}[ht!]
+		\begin{center}
+			\begin{tabular}{ |c|c| }
+				\hline
+				Material & Shear Modulus, $\mu$ (GPa) \\
+				\hline
+				Beryllium Copper (Be-Cu) & 48\\
+				Aluminum (Al), 6061-T6 & 224\\
+				Tungsten (W) & 161 \\ 
+				Titanium (Ti) & 41\\
+				Steel & 75\\
+				Fused Silica (SiO$_2$) & 31\\
+				\hline
+				
+			\end{tabular}
+			\caption{Table of the shear modulus for a selection of typical materials \cite{shear, quartz}.}\label{ShearTable}
+		\end{center}
+	\end{table}
+	\endgroup
+\end{center}
+
+
 \section{Pendulum Design}
 
 \chapter{Complications}
@@ -176,4 +219,8 @@ Due to the features of Equation \ref{inert4}, an inertial sensing apparatus achi
 \section{Inverse Square Law}
 \section{Equivalence Principle}
 \section{Gravitational Wave Detection}
+
+\bibliographystyle{unsrt}
+\bibliography{TorsionBalances}
+
 \end{document}
