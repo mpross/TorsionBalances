@@ -3,7 +3,7 @@
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{graphicx}
-\usepackage[paperwidth=5in, paperheight=8in]{geometry}
+%\usepackage[paperwidth=5.125in, paperheight=8.25in]{geometry}
 
 \begin{document}
 
@@ -162,7 +162,7 @@ Due to the features of Equation \ref{inert4}, an inertial sensing apparatus achi
 
 There is generally three parameters that can be adjusted in a fiber design: the length of the fiber, $l$, the cross-sectional radius\footnote{Here we're assuming a circular cross-section but many fibers have more complex geometries which must be accounted for.}, $r$, and the material. To optimize these parameters, one usually uses the following procedure. First, find out the maximum length that can fit in the given apparatus and use that length of fiber. Then choose a material based on the requirements of the experiment, what is readily available to purchase or manufacture, and which material will give the highest $Q$. Then minimize the fiber radius until the weight of the pendulum is close to the breaking strength of the fiber (with a healthy safety factor to minimize break-ability). This can iterated through multiple times along with various apparatus changes (chamber height, charge mitigation, etc.) to achieve a near optimal set-up. 
 
-Experimenter's are not left to blindly search for optimal parameters but are instead informed by vast troves of theoretical and experimental information much of which was produced by the engineering communities. The dependence of $\kappa$ on the geometry and material choice can be readily calculated. For a fiber with uniform cross-section\cite{hibbeler2003mechanics}:
+Experimenter's are not left to blindly search for optimal parameters but are instead informed by vast troves of theoretical and experimental information much of which was produced by the engineering communities. The $\kappa$-value for a fiber with uniform cross-section can be readily calculated using \cite{hibbeler2003mechanics}:
 \begin{equation}
 \kappa = \mu \frac{J}{l} 
 \end{equation}
@@ -171,7 +171,6 @@ where $\mu$ is the shear modulus of the material, $J$ is the torsional constant 
 \kappa = \mu \frac{\pi r^4}{2 l} \label{kappa}
 \end{equation}
 where $r$ is the cross-sectional radius of the fiber. Equation \ref{kappa} shows the drastic dependence of $\kappa$ on the radius of the fiber and to a lesser extent the length. The value of the shear modulus, $\mu$, for a given material is typically looked-up in various engineering references. Table \ref{ShearTable} gives the values for a selection of materials typically used in torsion balance apparatus.
-
 
 \begin{center}		
 	\begingroup
@@ -188,7 +187,7 @@ where $r$ is the cross-sectional radius of the fiber. Equation \ref{kappa} shows
 				Tungsten (W) & 161 \\ 
 				Titanium (Ti) & 41\\
 				Steel & 75\\
-				Fused Silica (SiO$_2$) & 31\\
+				Fused Silica (SiO$_2$) & 31 \\
 				\hline
 				
 			\end{tabular}
@@ -198,6 +197,48 @@ where $r$ is the cross-sectional radius of the fiber. Equation \ref{kappa} shows
 	\endgroup
 \end{center}
 
+Naively, Equation \ref{kappa} could be interpreted as allowing arbitrarily low $\kappa$-values since up to this point we have not set any limits on the minimum width of the torsion fiber. However, in addition to providing the restoring torque the fiber also has to hold the pendulum's weight. The maximum force that a fiber can experience without deforming\footnote{There are two tensile strengths one could use: the yield strength or the ultimate tensile strength. The yield strength is the point at which the material deforms while the ultimate tensile strength is when it breaks. The ultimate tensile strength is typically less than twice the yield strength. Here we use the yield strength as it is lower than the ultimate tensile strength and deformation of a torsion fiber would alter the other parameters discussed here.} follows:
+\begin{equation}
+F=\sigma \pi r^2
+\end{equation}
+where $\sigma$ is the yield strength of the material and $r$ is the cross-sectional radius. The minimum radius needed to hold a pendulum is then:
+\begin{equation}
+r_{\text{min}}=\sqrt{\frac{m g}{\pi \sigma}}
+\end{equation}
+where $m$ is the mass of the pendulum and $g$ is the local gravitational acceleration. A fiber of this radius could hold the pendulum but any further force (earthquake, anthropogenic forces, etc.) on the fiber would cause it to yield. Thus a safety factor is usually used to ensure the apparatus is robust against laboratory conditions.
+\begin{equation}
+r_{\text{safe}}=\eta \sqrt{\frac{m g}{\pi \sigma}}
+\end{equation}
+where $\eta$ is the safety factor with typical values in the range of 2 - 3. Yield strength is another parameter which in practice is looked-up in engineering references. Table \ref{YieldTable} shows values for a collection of typical materials used for torsion fibers.
+
+\begin{center}		
+	\begingroup
+	\setlength{\tabcolsep}{10pt} % Default value: 6pt
+	\renewcommand{\arraystretch}{1.5} % Default value: 1
+	\begin{table}[ht!]
+		\begin{center}
+			\begin{tabular}{ |c|c| }
+				\hline
+				Material & Yield Strength, $\sigma$ (MPa) \\
+				\hline
+				Beryllium Copper (Be-Cu) & 965 - 1205 \\
+				Aluminum (Al), 6061-T6 & 241\\
+				Tungsten (W) & 550 \\ 
+				Titanium (Ti) & 100 - 225\\
+				Steel & 75\\
+				Fused Silica (SiO$_2$) & 48\\
+				\hline
+				
+			\end{tabular}
+			\caption{Table of yield strengths for a selection of typical materials \cite{quartz, yield, alum, becu}.}\label{YieldTable}
+		\end{center}
+	\end{table}
+	\endgroup
+\end{center}
+
+The quality factor, $Q$, is also an important consideration when engineering a torsion fiber. The $Q$-value is inversely proportional to the amount of mechanical energy dissipated in the fiber. The $Q$-value not only changes the response function of the system, as can be seen in Figure \ref{respPlot}, but also influences the amount of thermal noise in the system. Thermal noise is discussed in detail in Section \ref{thermal} however when it comes to fiber design the important fact is that thermal torque noise follows, $\tau \sim 1/\sqrt{Q}$. Thus the higher the $Q$ the lower the thermal noise.
+
+The exact value of the quality factor of a given fiber is dependent on a variety of factors, from the mechanics of the end points to the presence of surface defects, however many materials are known to have larger $Q$-values than others. Generally, if the material is more uniform then it will have a larger $Q$-value. Metals are the traditional choice especially those historically used in musical instruments (bells, guitar strings, etc.). Specifically, tungsten fibers are known to achieve $Q$-values of $\sim4500$ \cite{qual}. A type of glass called fused silica or fused quartz is also well known to be a high-$Q$ material. It is formed from almost pure silicon dioxide (SiO$_2$) and can achieve $Q$-values as high as $10^5$ \cite{qual}. As compared to metals, fused silica is extremely delicate and thus many hours of lab work can be ruined by simply touching the fiber. To many experimenter's, including those at the world's gravitational wave observatories, this risk is well worth the exceedingly high $Q$-values achieved by this material.
 
 \section{Pendulum Design}
 
