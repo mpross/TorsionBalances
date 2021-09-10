@@ -156,7 +156,7 @@ At first glance, Equation \ref{inert4} looks very similar to the angle response 
 
 Due to the features of Equation \ref{inert4}, an inertial sensing apparatus achieves its best performance above the resonant frequency and quickly looses sensitively below it. Thus lowering the resonant frequency increases the band of interest.
 
-\section{Fiber Selection} \label{fiber}
+\section{Fiber Engineering} \label{fiber}
 
 \quad Although it is easy to think of the torsion fiber as a minor part of the torsion balance system, manufacturing the optimal fiber for a given experiment is an art in itself. There are two primary optimizations when designing a torsion fiber: minimizing the $\kappa$ of the fiber and maximizing the $Q$. These are not necessarily orthogonal and many design alterations will drastically change both parameters. 
 
@@ -242,6 +242,18 @@ The exact value of the quality factor of a given fiber is dependent on a variety
 
 \section{Pendulum Design}
 
+\quad Engineering a suitable fiber doesn't in itself make for a high-quality torsion balance; a quality pendulum is the other key ingredient. Much of the pendulum design depends strongly on the experiment that is to be conducted with the apparatus. Yet there are a few common guidelines that lead to the top performing pendulums. 
+
+With every pendulum, there is mass that is used in the scientific experiment, which we call active mass, and mass that only serves as structural support, called passive mass. In the simple torsion pendulum shown in Figure \ref{simpleFig}, the active mass would be the test-masses while the passive would be the rod. Since many experiments are more sensitive if the apparatus has more active mass, experimenter's want to maximize the active mass and minimize the passive. The figure of merit for a given pendulum design is the ratio of the active mass and the total mass:
+
+\begin{equation}
+\alpha = \frac{m_{\text{active}}}{m_{\text{active}}+m_{\text{passive}}}
+\end{equation}
+
+Ideally, $\alpha=1$ (such as in the massless-rod, simple pendulum example) which would imply that all of the mass of the pendulum is participating in the experiment. However, no realistic pendulum achieves this and $\alpha$-values of 40-60\% are considered satisfactory.
+
+In addition to maximizing the active mass, a pendulum design must account for a variety of extraneous couplings and noise sources that are addressed in later sections. These include allowing angle readout, Section \ref{readout}, minimizing electrostatic coupling, Section \ref{elect}, and accounting for gravity gradients, Section \ref{gravGrad}. 
+
 \chapter{Complications}
 \section{Swing Modes} \label{swing}
 \section{Centrifugal Force}
@@ -251,10 +263,14 @@ The exact value of the quality factor of a given fiber is dependent on a variety
 \section{Thermal Noise} \label{thermal}
 \section{Readout Noise}\label{readout}
 \section{Seismic Motion}
-\section{Electrostatic Couplings}
+\section{Electrostatic Couplings}\label{elect}
 \section{Magnetic Noise}
 \section{Gas Damping} \label{gas}
-\section{Gravity Gradients}
+\section{Gravity Gradients}\label{gravGrad}
+
+\chapter{Data Analysis Techniques}
+\section{Fourier Analysis}
+\section{Linear Least-Squares Fitting}
 
 \chapter{Case Study Experiments}
 \section{Inverse Square Law}

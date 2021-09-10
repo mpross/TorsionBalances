@@ -7,7 +7,7 @@
 \contentsline {chapter}{\numberline {2}Mechanics}{11}{}%
 \contentsline {section}{\numberline {2.1}Torque Sensing}{11}{}%
 \contentsline {section}{\numberline {2.2}Inertial Sensing}{12}{}%
-\contentsline {section}{\numberline {2.3}Fiber Selection}{13}{}%
+\contentsline {section}{\numberline {2.3}Fiber Engineering}{13}{}%
 \contentsline {section}{\numberline {2.4}Pendulum Design}{16}{}%
 \contentsline {chapter}{\numberline {3}Complications}{17}{}%
 \contentsline {section}{\numberline {3.1}Swing Modes}{17}{}%
@@ -21,7 +21,10 @@
 \contentsline {section}{\numberline {4.5}Magnetic Noise}{19}{}%
 \contentsline {section}{\numberline {4.6}Gas Damping}{19}{}%
 \contentsline {section}{\numberline {4.7}Gravity Gradients}{19}{}%
-\contentsline {chapter}{\numberline {5}Case Study Experiments}{21}{}%
-\contentsline {section}{\numberline {5.1}Inverse Square Law}{21}{}%
-\contentsline {section}{\numberline {5.2}Equivalence Principle}{21}{}%
-\contentsline {section}{\numberline {5.3}Gravitational Wave Detection}{21}{}%
+\contentsline {chapter}{\numberline {5}Data Analysis Techniques}{21}{}%
+\contentsline {section}{\numberline {5.1}Fourier Analysis}{21}{}%
+\contentsline {section}{\numberline {5.2}Linear Least-Squares Fitting}{21}{}%
+\contentsline {chapter}{\numberline {6}Case Study Experiments}{23}{}%
+\contentsline {section}{\numberline {6.1}Inverse Square Law}{23}{}%
+\contentsline {section}{\numberline {6.2}Equivalence Principle}{23}{}%
+\contentsline {section}{\numberline {6.3}Gravitational Wave Detection}{23}{}%
