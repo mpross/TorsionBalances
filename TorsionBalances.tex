@@ -261,6 +261,17 @@ In addition to maximizing the active mass, a pendulum design must account for a 
 
 \chapter{Noise Sources and Mitigation}
 \section{Thermal Noise} \label{thermal}
+
+\quad The fact that torsion balances are at finite temperature causes ever-present noise which is one of the most difficult to mitigate. 
+
+This thermal motion causes a torque that follows \cite{thermal}:
+\begin{equation}
+\tau (\omega)= \sqrt{4 k_B T\bigg( \frac{\kappa}{Q} \bigg) \bigg( \frac{1}{\omega} \bigg)}
+\end{equation}
+where $k_B$ is Boltzman's constant, $T$ is the temperature, $\kappa$ is the spring constant, $Q$ is the quality factor, and $\omega$ is the angular frequency.
+
+There are three parameters that can altered to minimize this noise. For most torsion balances the temperature is set by the ambient temperature of the laboratory however, a few experimenter's have investigated cooling their apparatus to cryogenic temperatures \cite{cryo}. The other two, $\kappa$ and $Q$, are determined by the torsion fiber and thus readily engineered. 
+
 \section{Readout Noise}\label{readout}
 \section{Seismic Motion}
 \section{Electrostatic Couplings}\label{elect}
