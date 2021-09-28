@@ -73,7 +73,7 @@ If we assume a harmonic solution, $\theta(t)=A~e^{i\omega t}$, we can transform 
 It is convenient to define two parameters here: the resonant frequency, $\omega_0=\sqrt{\kappa/I}$, and the quality factor, $Q=\frac{1}{\delta}$. Equation \ref{four} can then be rearranged to:
 
 \begin{equation}
- \tilde{\theta}(\omega)= \frac{\tau_{\text{ext}}(\omega)}{\kappa}\frac{1}{1-\frac{\omega^2}{\omega_0^2} +i/Q} \label{four2}
+ \tilde{\theta}(\omega)= \frac{\tau_{\text{ext}}(\omega)}{\kappa}\frac{1}{1-\omega^2/\omega_0^2 +i/Q} \label{four2}
 \end{equation}
 
 \section{Response Function}\label{resp}
@@ -81,7 +81,7 @@ It is convenient to define two parameters here: the resonant frequency, $\omega_
 \quad The second dimensionless factor in Equation \ref{four2} is traditionally called the response function or transfer function of the system. It controls the amount of angle the pendulum gets for a given torque as a function of frequency. 
 
 \begin{equation}
-R(\omega)= \frac{1}{1-\frac{\omega^2}{\omega_0^2} +i/Q} \label{four3}
+R(\omega)= \frac{1}{1-\omega^2/\omega_0^2 +i/Q} \label{four3}
 \end{equation}
 
 For a pendulum with no damping, $Q\rightarrow\infty$, the response function has three distinct features. Below the resonant frequency, $\omega << \omega_0$, the response goes to unity. Above the resonant frequency, $\omega >> \omega_0$, the response function follows $R(\omega)=-\omega_0^2/\omega^2$ causing effect of high frequency torques to decrease as $1/\omega^2$. At the resonant frequency, $\omega=\omega_0$ the response goes to infinity. This causes the motion at this frequency to grow without limit.
@@ -286,6 +286,35 @@ In addition to maximizing the active mass and tuning the geometry, a pendulum de
 
 \chapter{Complications}
 \section{Swing Modes} \label{swing}
+
+\quad Up to this point, we have only focused on the torsional degree of freedom but any torsion balance with a non-zero length torsion fiber will also permit ``swing'' modes. These are the prototypical pendulum modes whose restoring force is due to gravity not the torsion spring. Figure \ref{swingFig} shows the swing degree of freedom for our simple torsion balance system.
+
+\begin{figure}[!h]
+\begin{centering}
+\includegraphics[width=0.65\textwidth]{Swing.pdf}
+\caption{The swing degree of freedom for a simple torsion balance system.}\label{swingFig}
+\end{centering}
+\end{figure}
+
+Restricting ourselves to one swing axis and allowing for external damping of this motion, the equation of motion for the swing degree of freedom is:
+\begin{equation}
+I_\phi\ \ddot{\phi}(t)+\gamma_\phi \dot{\phi}(t) - \tau_g(t)=\tau_\phi(t)
+\end{equation}
+where $I_\phi$ is the moment of inertia about the swing axis (into the page in Figure~\ref{swing}), $\phi$ is the swing angle of the pendulum, $\gamma_\phi$ is the swing damping constant, $\tau_g$ is the gravitational restoring torque, and $\tau_\phi$ is the exterior torque about the swing axis. Treating the pendulum as a point mass gives:
+\begin{equation}
+m l^2 \ddot{\phi}(t)+\gamma_\phi \dot{\phi}(t)+m g l \sin(\phi(t))=\tau_\phi(t)
+\end{equation}
+where $m$ is the mass of the pendulum, $l$ is the length of the torsion fiber, and $g$ is the local gravitational acceleration. If we take the small-$\phi$ approximation the equation of motion becomes:
+\begin{equation}
+\ddot{\phi}(t)+\frac{\gamma_\phi}{m l^2} \dot{\phi}(t)+\frac{g}{l} \phi(t)=\frac{\tau_\phi(t)}{m l^2}
+\end{equation}
+If we define $\nu_0=\sqrt{g/l}$ and $\nu_0/\Omega=\gamma_\phi/(m l^2)$, the equation of motion in the Fourier domain becomes:
+
+\begin{equation}
+\phi(\omega)=\frac{\tau_\phi(t)}{m g l} \frac{1}{1-\omega^2/\nu_0^2+i\omega/(\nu_0\Omega)}
+\end{equation}
+
+
 \section{Centrifugal Force}
 \section{Multiple Pendulums}
 

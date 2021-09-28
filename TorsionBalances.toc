@@ -11,8 +11,8 @@
 \contentsline {section}{\numberline {2.4}Pendulum Design}{16}{}%
 \contentsline {chapter}{\numberline {3}Complications}{19}{}%
 \contentsline {section}{\numberline {3.1}Swing Modes}{19}{}%
-\contentsline {section}{\numberline {3.2}Centrifugal Force}{19}{}%
-\contentsline {section}{\numberline {3.3}Multiple Pendulums}{19}{}%
+\contentsline {section}{\numberline {3.2}Centrifugal Force}{20}{}%
+\contentsline {section}{\numberline {3.3}Multiple Pendulums}{20}{}%
 \contentsline {chapter}{\numberline {4}Noise Sources and Mitigation}{21}{}%
 \contentsline {section}{\numberline {4.1}Thermal Noise}{21}{}%
 \contentsline {section}{\numberline {4.2}Readout Noise}{22}{}%

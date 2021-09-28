@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.4.5)  28 SEP 2021 12:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.4.5)  28 SEP 2021 13:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -190,6 +190,10 @@ Chapter 0.
 
 ]
 Chapter 1.
+
+
+pdfTeX warning: /usr/bin/pdflatex (file ./SimpleTorsionBalance.pdf): PDF inclus
+ion: found PDF version <1.6>, but at most version <1.5> allowed
 <SimpleTorsionBalance.pdf, id=27, 614.295pt x 686.565pt>
 File: SimpleTorsionBalance.pdf Graphic file (type pdf)
 <use SimpleTorsionBalance.pdf>
@@ -199,7 +203,7 @@ Package pdftex.def Info: SimpleTorsionBalance.pdf  used on input line 32.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [7] [8 <./SimpleTorsionBalance.pdf>]
-<ResponseFunction.pdf, id=47, 697.60625pt x 438.63875pt>
+<ResponseFunction.pdf, id=52, 697.60625pt x 438.63875pt>
 File: ResponseFunction.pdf Graphic file (type pdf)
 <use ResponseFunction.pdf>
 Package pdftex.def Info: ResponseFunction.pdf  used on input line 93.
@@ -210,7 +214,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [9] [10 <./ResponseFunction.pdf>]
 Chapter 2.
-<TorqueSpectrum.pdf, id=139, 769.87625pt x 345.29pt>
+<TorqueSpectrum.pdf, id=143, 769.87625pt x 345.29pt>
 File: TorqueSpectrum.pdf Graphic file (type pdf)
 <use TorqueSpectrum.pdf>
 Package pdftex.def Info: TorqueSpectrum.pdf  used on input line 115.
@@ -225,7 +229,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 ]
 [12 <./TorqueSpectrum.pdf>]
-<InertialSpectrum.pdf, id=195, 769.87625pt x 345.29pt>
+<InertialSpectrum.pdf, id=199, 769.87625pt x 345.29pt>
 File: InertialSpectrum.pdf Graphic file (type pdf)
 <use InertialSpectrum.pdf>
 Package pdftex.def Info: InertialSpectrum.pdf  used on input line 152.
@@ -235,17 +239,26 @@ Package pdftex.def Info: InertialSpectrum.pdf  used on input line 152.
 
 ]
 Chapter 3.
-[19] [20
 
-]
+
+pdfTeX warning: /usr/bin/pdflatex (file ./Swing.pdf): PDF inclusion: found PDF 
+version <1.6>, but at most version <1.5> allowed
+<Swing.pdf, id=272, 578.16pt x 578.16pt>
+File: Swing.pdf Graphic file (type pdf)
+<use Swing.pdf>
+Package pdftex.def Info: Swing.pdf  used on input line 294.
+(pdftex.def)             Requested size: 224.2479pt x 224.24641pt.
+[19 <./Swing.pdf>] [20]
 Chapter 4.
 
-LaTeX Warning: Citation `cryo' on page 21 undefined on input line 303.
+LaTeX Warning: Citation `cryo' on page 21 undefined on input line 332.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [21]
+ [21
+
+]
 [22]
 Chapter 5.
 [23
@@ -265,10 +278,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2048 strings out of 481176
- 28723 string characters out of 5914227
- 308823 words of memory out of 5000000
- 18988 multiletter control sequences out of 15000+600000
+ 2055 strings out of 481176
+ 28830 string characters out of 5914227
+ 308834 words of memory out of 5000000
+ 18994 multiletter control sequences out of 15000+600000
  412897 words of font info for 63 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  68i,8n,74p,1108b,309s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -281,17 +294,16 @@ t/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
-6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on TorsionBalances.pdf (27 pages, 421364 bytes).
+s/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
+7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on TorsionBalances.pdf (27 pages, 432105 bytes).
 PDF statistics:
- 352 PDF objects out of 1000 (max. 8388607)
- 297 compressed objects within 3 object streams
+ 367 PDF objects out of 1000 (max. 8388607)
+ 305 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
