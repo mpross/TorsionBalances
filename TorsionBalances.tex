@@ -268,10 +268,21 @@ For the simple torsion balance described in Section \ref{simple} the mass densit
 \end{equation}
 where $m$ is the mass of one test mass and $R$ is the ``lever-arm'' (the radius from the torsion fiber to the test masses). The moment of inertia then simplifies to:
 \begin{equation}
-I=2 m R^2
+I=2 m R^2 \label{inert}
 \end{equation}
 
-In addition to maximizing the active mass, a pendulum design must account for a variety of extraneous couplings and noise sources that are addressed in later sections. These include allowing angle readout, Section \ref{readout}, minimizing electrostatic coupling, Section \ref{elect}, and accounting for gravity gradients, Section \ref{gravGrad}. 
+Although Equation \ref{inert} is for an idealized pendulum, moments of inertia for realistic geometries follow the same scaling (i.e. $I\sim mR^2$). The primary effect of the moment of inertia on the equation of motion is the change of the resonant frequency:
+\begin{equation}
+\omega_0=\sqrt{\frac{\kappa}{I}}\sim \frac{1}{R} \sqrt{\frac{\kappa}{m}}
+\end{equation}
+
+The lever-arm not only affects the moment of inertia but can also influence the sensitivity of a given experiment. If the experiment is searching for a new force, $\vec{F}_\text{new}$, then the torque experienced by the pendulum will follow:
+\begin{equation}
+\tau(t)=\vec{r} \times \vec{F}_\text{new}\sim R\ F_\text{new}
+\end{equation}
+Thus for a given torque sensitivity, the larger the lever-arm the more sensitive the experiment is to new forces. This is why most experimenters place the test masses at the largest radius allowed in the given apparatus.
+
+In addition to maximizing the active mass and tuning the geometry, a pendulum design must account for a variety of extraneous couplings and noise sources that are addressed in later sections. These include allowing angle readout, Section \ref{readout}, minimizing electrostatic coupling, Section \ref{elect}, and accounting for gravity gradients, Section \ref{gravGrad}. 
 
 \chapter{Complications}
 \section{Swing Modes} \label{swing}
