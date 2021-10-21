@@ -316,6 +316,42 @@ If we define $\nu_0=\sqrt{g/l}$ and $\nu_0/\Omega=\gamma_\phi/(m l^2)$, the equa
 
 
 \section{Centrifugal Force}
+
+\begin{figure}[!h]
+\begin{centering}
+\includegraphics[width=0.45\textwidth]{Centrifugal.pdf}
+\caption{Geometry of forces caused by having the torsion balance on the surface of the Earth.}\label{centFig}
+\end{centering}
+\end{figure}
+
+For most practical purposes, we assume that the torsion fiber runs parallel to local gravity. If the Earth was a perfect sphere the fiber would point directly towards the center of the Earth. However, this is only true if the torsion balance is located at either the equator or one of the planet's poles. Torsion balances experience two forces due to being located on the surface of the Earth: the gravitational pull of the Earth and the centrifugal force due to the Earth's rotation. These together determine the equilibrium swing angle which is not pointed along local gravity.
+
+Since the Earth is rotating, the torsion balance feels a centrifugal force that points perpendicular to the rotation axis of the Earth and follows:
+\begin{equation}
+F_c= m \omega_\oplus^2R_\oplus \cos \alpha
+\end{equation}
+where $m$ is the mass of the pendulum, $\omega_\oplus$ is the angular frequency of the Earth, $R_\oplus$ is the radius of the Earth, and $\alpha$ is the latitude of the torsion balance's location. Figure \ref{centFig} shows the geometry of this force along with the gravitational force due to the Earth.
+
+
+ \begin{figure}[!h]
+\begin{centering}
+\includegraphics[width=0.65\textwidth]{CentrifugalForce.pdf}
+\caption{Force diagram for the forces acting on the torsion balance in equilibrium.}\label{centForFig}
+\end{centering}
+\end{figure}
+
+In the lab frame, the centrifugal force points upwards at an angle from local vertical equal to the latitude of the torsion balances location as shown in Figure \ref{centForFig}. This provides an additional torque on the balance which shifts its swing equilibrium angle to be:
+\begin{equation}
+\phi = \arctan\bigg(\frac{\omega_\oplus^2R_\oplus \cos \alpha \sin \alpha}{g-\omega^2R_\oplus \cos^2 \alpha}\bigg)
+\end{equation}
+
+ \begin{figure}[!h]
+\begin{centering}
+\includegraphics[width=0.85\textwidth]{CentrifugalPlot.pdf}
+\caption{Force diagram for the forces acting on the torsion balance in equilibrium.}\label{centForFig}
+\end{centering}
+\end{figure}
+
 \section{Multiple Pendulums}
 
 \chapter{Noise Sources and Mitigation}
