@@ -315,6 +315,19 @@ If we define $\nu_0=\sqrt{g/l}$ and $\nu_0/\Omega=\gamma_\phi/(m l^2)$, the equa
 \end{equation}
 
 
+ \begin{figure}[!h]
+\begin{centering}
+\includegraphics[width=0.65\textwidth]{Damper.pdf}
+\caption{Schematic of eddy-current damper.}\label{damper}
+\end{centering}
+\end{figure}
+
+Excess swing motion can have detrimental effects on the performance of an apparatus. The primary effect of swing motion is addition noise in the torsional degree of freedom. This can be caused by either mechanical cross-coupling converting swing motion into torsional motion or, more commonly, non-linearities in the angular readout systems, Section \ref{readout}, causing swing to register as torsional readings. Thus, any sensitive torsion balance will include some method to limit this swing motion.
+
+The traditional way to limit swing motion is with the addition of an eddy-current swing damper, shown in Figure \ref{damper}. This consists of a conducting damper-mass which is suspended from a pre-hanger fiber and a vertical spring. The torsion balance is then suspended from the damper-mass. The pre-hanger fiber is typically larger diameter than the torsion fiber to separate the double pendulum modes, see Section \ref{double}. To achieve eddy-current damping this mass is placed is a non-uniform magnetic field typically produced by a pair of ring magnetics held by an independent structure.
+
+
+
 \section{Centrifugal Force}
 
 \begin{figure}[!h]
@@ -342,17 +355,21 @@ where $m$ is the mass of the pendulum, $\omega_\oplus$ is the angular frequency 
 
 In the lab frame, the centrifugal force points upwards at an angle from local vertical equal to the latitude of the torsion balances location as shown in Figure \ref{centForFig}. This provides an additional torque on the balance which shifts its swing equilibrium angle to be:
 \begin{equation}
-\phi = \arctan\bigg(\frac{\omega_\oplus^2R_\oplus \cos \alpha \sin \alpha}{g-\omega^2R_\oplus \cos^2 \alpha}\bigg)
+\phi_0 = \arctan\bigg(\frac{\omega_\oplus^2R_\oplus \cos \alpha \sin \alpha}{g-\omega^2R_\oplus \cos^2 \alpha}\bigg) \label{centEq}
 \end{equation}
+
+Figure \ref{centPlotFig} shows the Equation \ref{centEq} evaluated at a collection of northern hemisphere latitudes. The southern hemisphere (negative latitudes) has the same magnitude effect but opposite sign. This effect is maximum at 45$^\circ$ latitude at which the pendulum hangs $\sim1.7$ mrad away from local vertical. 
 
  \begin{figure}[!h]
 \begin{centering}
 \includegraphics[width=0.85\textwidth]{CentrifugalPlot.pdf}
-\caption{Force diagram for the forces acting on the torsion balance in equilibrium.}\label{centForFig}
+\caption{Plot of swing equilibrium angle vs. latitude.}\label{centPlotFig}
 \end{centering}
 \end{figure}
 
-\section{Multiple Pendulums}
+Although this shift has little effect on many experiments, it allows torsion balances to use the Earth as a source mass at most latitudes. This is used in many equivalence principle tests as well as using torsion balances for geophysical exploration.
+
+\section{Double Pendulum} \label{double}
 
 \chapter{Noise Sources and Mitigation}
 \section{Thermal Noise} \label{thermal}
@@ -377,11 +394,6 @@ There are three parameters that can altered to minimize this noise. For most tor
 \chapter{Data Analysis Techniques}
 \section{Fourier Analysis}
 \section{Linear Least-Squares Fitting}
-
-\chapter{Case Study Experiments}
-\section{Inverse Square Law}
-\section{Equivalence Principle}
-\section{Gravitational Wave Detection}
 
 \bibliographystyle{unsrt}
 \bibliography{TorsionBalances}

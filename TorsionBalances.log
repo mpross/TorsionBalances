@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2021.4.27)  21 OCT 2021 12:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2021.4.27)  25 OCT 2021 11:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -116,9 +116,6 @@ File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 
 LaTeX Warning: Label `inert' multiply defined.
 
-
-LaTeX Warning: Label `centForFig' multiply defined.
-
 )
 \openout1 = `TorsionBalances.aux'.
 
@@ -216,11 +213,11 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \tf@toc=\write3
 \openout3 = `TorsionBalances.toc'.
 
- [3] [4]
-Chapter 0.
-[5
+ [3] [4
 
-] [6
+]
+Chapter 0.
+[5] [6
 
 ]
 Chapter 1.
@@ -283,46 +280,48 @@ File: Swing.pdf Graphic file (type pdf)
 Package pdftex.def Info: Swing.pdf  used on input line 294.
 (pdftex.def)             Requested size: 224.2479pt x 224.24641pt.
 [19 <./Swing.pdf>]
-<Centrifugal.pdf, id=289, 650.43pt x 614.295pt>
+<Damper.pdf, id=289, 614.295pt x 614.295pt>
+File: Damper.pdf Graphic file (type pdf)
+<use Damper.pdf>
+Package pdftex.def Info: Damper.pdf  used on input line 320.
+(pdftex.def)             Requested size: 224.2479pt x 224.24861pt.
+ [20 <./Damper.pdf>]
+<Centrifugal.pdf, id=300, 650.43pt x 614.295pt>
 File: Centrifugal.pdf Graphic file (type pdf)
 <use Centrifugal.pdf>
-Package pdftex.def Info: Centrifugal.pdf  used on input line 322.
+Package pdftex.def Info: Centrifugal.pdf  used on input line 335.
 (pdftex.def)             Requested size: 155.24895pt x 146.61832pt.
- [20 <./Centrifugal.pdf>]
-<CentrifugalForce.pdf, id=305, 614.295pt x 614.295pt>
+ [21 <./Centrifugal.pdf>]
+<CentrifugalForce.pdf, id=316, 614.295pt x 614.295pt>
 File: CentrifugalForce.pdf Graphic file (type pdf)
 <use CentrifugalForce.pdf>
-Package pdftex.def Info: CentrifugalForce.pdf  used on input line 338.
+Package pdftex.def Info: CentrifugalForce.pdf  used on input line 351.
 (pdftex.def)             Requested size: 224.2479pt x 224.24861pt.
-<CentrifugalPlot.pdf, id=306, 716.6775pt x 370.38374pt>
+<CentrifugalPlot.pdf, id=317, 716.6775pt x 370.38374pt>
 File: CentrifugalPlot.pdf Graphic file (type pdf)
 <use CentrifugalPlot.pdf>
-Package pdftex.def Info: CentrifugalPlot.pdf  used on input line 350.
+Package pdftex.def Info: CentrifugalPlot.pdf  used on input line 365.
 (pdftex.def)             Requested size: 293.2521pt x 151.55312pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[21 <./CentrifugalForce.pdf>] [22 <./CentrifugalPlot.pdf>]
+[22 <./CentrifugalForce.pdf>] [23 <./CentrifugalPlot.pdf>] [24
+
+]
 Chapter 4.
 
-LaTeX Warning: Citation `cryo' on page 23 undefined on input line 368.
+LaTeX Warning: Citation `cryo' on page 25 undefined on input line 385.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [23
-
-]
-[24]
+ [25]
+[26]
 Chapter 5.
-[25
+(./TorsionBalances.bbl [27
 
-] [26
-
-]
-Chapter 6.
-(./TorsionBalances.bbl [27] [28
+] [28
 
 ]) [29] (./TorsionBalances.aux)
 
@@ -333,10 +332,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2237 strings out of 492615
- 30504 string characters out of 6131390
- 98826 words of memory out of 5000000
- 6110 multiletter control sequences out of 15000+600000
+ 2246 strings out of 492615
+ 30634 string characters out of 6131390
+ 98870 words of memory out of 5000000
+ 6118 multiletter control sequences out of 15000+600000
  13107 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,8n,25p,1087b,307s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -355,10 +354,10 @@ usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/te
 xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on TorsionBalances.pdf (29 pages, 485491 bytes).
+Output written on TorsionBalances.pdf (29 pages, 495869 bytes).
 PDF statistics:
- 417 PDF objects out of 1000 (max. 8388607)
- 342 compressed objects within 4 object streams
+ 425 PDF objects out of 1000 (max. 8388607)
+ 347 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 

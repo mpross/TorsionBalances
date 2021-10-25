@@ -11,20 +11,16 @@
 \contentsline {section}{\numberline {2.4}Pendulum Design}{16}% 
 \contentsline {chapter}{\numberline {3}Complications}{19}% 
 \contentsline {section}{\numberline {3.1}Swing Modes}{19}% 
-\contentsline {section}{\numberline {3.2}Centrifugal Force}{20}% 
-\contentsline {section}{\numberline {3.3}Multiple Pendulums}{21}% 
-\contentsline {chapter}{\numberline {4}Noise Sources and Mitigation}{23}% 
-\contentsline {section}{\numberline {4.1}Thermal Noise}{23}% 
-\contentsline {section}{\numberline {4.2}Readout Noise}{24}% 
-\contentsline {section}{\numberline {4.3}Seismic Motion}{24}% 
-\contentsline {section}{\numberline {4.4}Electrostatic Couplings}{24}% 
-\contentsline {section}{\numberline {4.5}Magnetic Noise}{24}% 
-\contentsline {section}{\numberline {4.6}Gas Damping}{24}% 
-\contentsline {section}{\numberline {4.7}Gravity Gradients}{24}% 
-\contentsline {chapter}{\numberline {5}Data Analysis Techniques}{25}% 
-\contentsline {section}{\numberline {5.1}Fourier Analysis}{25}% 
-\contentsline {section}{\numberline {5.2}Linear Least-Squares Fitting}{25}% 
-\contentsline {chapter}{\numberline {6}Case Study Experiments}{27}% 
-\contentsline {section}{\numberline {6.1}Inverse Square Law}{27}% 
-\contentsline {section}{\numberline {6.2}Equivalence Principle}{27}% 
-\contentsline {section}{\numberline {6.3}Gravitational Wave Detection}{27}% 
+\contentsline {section}{\numberline {3.2}Centrifugal Force}{21}% 
+\contentsline {section}{\numberline {3.3}Double Pendulum}{22}% 
+\contentsline {chapter}{\numberline {4}Noise Sources and Mitigation}{25}% 
+\contentsline {section}{\numberline {4.1}Thermal Noise}{25}% 
+\contentsline {section}{\numberline {4.2}Readout Noise}{26}% 
+\contentsline {section}{\numberline {4.3}Seismic Motion}{26}% 
+\contentsline {section}{\numberline {4.4}Electrostatic Couplings}{26}% 
+\contentsline {section}{\numberline {4.5}Magnetic Noise}{26}% 
+\contentsline {section}{\numberline {4.6}Gas Damping}{26}% 
+\contentsline {section}{\numberline {4.7}Gravity Gradients}{26}% 
+\contentsline {chapter}{\numberline {5}Data Analysis Techniques}{27}% 
+\contentsline {section}{\numberline {5.1}Fourier Analysis}{27}% 
+\contentsline {section}{\numberline {5.2}Linear Least-Squares Fitting}{27}% 

@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2020/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: TorsionBalances.aux
+The style file: unsrt.bst
+Database file #1: TorsionBalances.bib
+You've used 8 entries,
+            1791 wiz_defined-function locations,
+            480 strings with 4090 characters,
+and the built_in function-call counts, 1220 in all, are:
+= -- 94
+> -- 39
+< -- 0
++ -- 18
+- -- 10
+* -- 45
+:= -- 188
+add.period$ -- 19
+call.type$ -- 8
+change.case$ -- 7
+chr.to.int$ -- 0
+cite$ -- 8
+duplicate$ -- 53
+empty$ -- 159
+format.name$ -- 10
+if$ -- 277
+int.to.chr$ -- 0
+int.to.str$ -- 8
+missing$ -- 4
+newline$ -- 38
+num.names$ -- 8
+pop$ -- 36
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 40
+stack$ -- 0
+substring$ -- 52
+swap$ -- 8
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 11
+width$ -- 9
+write$ -- 70
