@@ -81,12 +81,12 @@ It is convenient to define two parameters here: the resonant frequency, $\omega_
 \quad The second dimensionless factor in Equation \ref{four2} is traditionally called the response function or transfer function of the system. It controls the amount of angle the pendulum gets for a given torque as a function of frequency. 
 
 \begin{equation}
-R(\omega)= \frac{1}{1-\omega^2/\omega_0^2 +i/Q} \label{four3}
+\Lambda(\omega)= \frac{1}{1-\omega^2/\omega_0^2 +i/Q} \label{four3}
 \end{equation}
 
-For a pendulum with no damping, $Q\rightarrow\infty$, the response function has three distinct features. Below the resonant frequency, $\omega << \omega_0$, the response goes to unity. Above the resonant frequency, $\omega >> \omega_0$, the response function follows $R(\omega)=-\omega_0^2/\omega^2$ causing effect of high frequency torques to decrease as $1/\omega^2$. At the resonant frequency, $\omega=\omega_0$ the response goes to infinity. This causes the motion at this frequency to grow without limit.
+For a pendulum with no damping, $Q\rightarrow\infty$, the response function has three distinct features. Below the resonant frequency, $\omega << \omega_0$, the response goes to unity. Above the resonant frequency, $\omega >> \omega_0$, the response function follows $\Lambda(\omega)=-\omega_0^2/\omega^2$ causing effect of high frequency torques to decrease as $1/\omega^2$. At the resonant frequency, $\omega=\omega_0$ the response goes to infinity. This causes the motion at this frequency to grow without limit.
 
-With damping, the response has a similar structure albeit with different amplitudes. Namely at the resonance the response does not approach infinity but instead $R(\omega)=-i Q$. The quality factor, hence the amount of damping, limits the maximum resonant motion for a given input torque. 
+With damping, the response has a similar structure albeit with different amplitudes. Namely at the resonance the response does not approach infinity but instead $\Lambda(\omega)=-i Q$. The quality factor, hence the amount of damping, limits the maximum resonant motion for a given input torque. 
 
 \begin{figure}[!h]
 \begin{centering}
@@ -103,10 +103,10 @@ The full response function is plotted in Figure \ref{respPlot} for a variety of 
 
 \quad For many experiments, the primary use of a torsion balance is to sense weak torques acting on the pendulum. In this mode, the measurements of the angle of the pendulum is converted to torque by rearranging Equation \ref{four2}:
 \begin{equation}
-\tau_{\text{ext}} (\omega)= \frac{\kappa\ \tilde{\theta}(\omega)}{R(\omega)} \label{torq}
+\tau_{\text{ext}} (\omega)= \frac{\kappa\ \tilde{\theta}(\omega)}{\Lambda(\omega)} \label{torq}
 \end{equation}
 
-If we assume a frequency-independent angle spectrum, $\tilde{\theta}(\omega)$, (which is unrealistic but a rough approximation of spectra arising from readout noise, Section \ref{readout}) then the corresponding torque spectrum will follow the inverse of the pendulum response function, $R(\omega)$. An example of such a spectrum is shown in Figure \ref{torqSpec}. This spectrum has very similar features as the response discussed in Section \ref{resp}. However, instead of having a peak at the resonant frequency it has a dip and above the resonant frequency the torque spectrum rises as $\sim \omega^2$. 
+If we assume a frequency-independent angle spectrum, $\tilde{\theta}(\omega)$, (which is unrealistic but a rough approximation of spectra arising from readout noise, Section \ref{readout}) then the corresponding torque spectrum will follow the inverse of the pendulum response function, $\Lambda(\omega)$. An example of such a spectrum is shown in Figure \ref{torqSpec}. This spectrum has very similar features as the response discussed in Section \ref{resp}. However, instead of having a peak at the resonant frequency it has a dip and above the resonant frequency the torque spectrum rises as $\sim \omega^2$. 
 
 These features are the first example we've seen that expresses the significance of the frequency of signal of interest in designing an experiment. A careful experimenter would design an apparatus to minimize the noise at the frequency of interest within practical limits. For example, the model apparatus described by Figure \ref{torqSpec} would not be ideal to run an experiment with a signal at 1 Hz but would be well suited for a signal at 10 mHz since the noise level differs by a factor of 100 between these two frequencies. This is a common consideration in torsion balance design that will reoccur throughout this work.
 
@@ -142,7 +142,7 @@ However, angular readout systems do not sense the inertial angle of the pendulum
 Combining Equations \ref{inert2} and \ref{inert3} yields:
 
 \begin{equation}
-\tilde{\theta}_0(\omega)=\frac{\omega_0^2}{\omega^2}\ \frac{1}{R(\omega)}\ \tilde{\theta}_a(\omega) \label{inert4}
+\tilde{\theta}_0(\omega)=\frac{\omega_0^2}{\omega^2}\ \frac{1}{\Lambda(\omega)}\ \tilde{\theta}_a(\omega) \label{inert4}
 \end{equation}
 
 At first glance, Equation \ref{inert4} looks very similar to the angle response to torque, Equation \ref{four2}. However, the extra factor of $\omega^2/\omega_0^2$ mirrors the features onto opposite sides of the resonance. For a frequency independent measured angle spectrum, the inertial angle spectrum will follow $\sim1/\omega^2$ below the resonance while above it flattens to approach the measured angle spectrum. Figure \ref{inertSpec} shows an example of such a spectrum which displays the same features as Figure \ref{torqSpec} but mirrored about the resonance frequency.
@@ -324,9 +324,9 @@ If we define $\nu_0=\sqrt{g/l}$ and $\nu_0/\Omega=\gamma_\phi/(m l^2)$, the equa
 
 Excess swing motion can have detrimental effects on the performance of an apparatus. The primary effect of swing motion is addition noise in the torsional degree of freedom. This can be caused by either mechanical cross-coupling converting swing motion into torsional motion or, more commonly, non-linearities in the angular readout systems, Section \ref{readout}, causing swing to register as torsional readings. Thus, any sensitive torsion balance will include some method to limit this swing motion.
 
-The traditional way to limit swing motion is with the addition of an eddy-current swing damper, shown in Figure \ref{damper}. This consists of a conducting damper-mass which is suspended from a pre-hanger fiber and a vertical spring. The torsion balance is then suspended from the damper-mass. The pre-hanger fiber is typically larger diameter than the torsion fiber to separate the double pendulum modes, see Section \ref{double}. To achieve eddy-current damping this mass is placed is a non-uniform magnetic field typically produced by a pair of ring magnetics held by an independent structure.
+The traditional way to limit swing motion is with the addition of an eddy-current swing damper, shown in Figure \ref{damper}. This consists of a conducting damper-mass which is suspended from a pre-hanger fiber and a vertical spring. The torsion balance is then suspended from the damper-mass. The pre-hanger fiber is typically larger diameter than the torsion fiber to separate the double pendulum modes. To achieve eddy-current damping this mass is placed is a non-uniform magnetic field typically produced by a pair of ring magnetics held by an independent structure.
 
-
+As the damper mass moves in the non-uniform magnetic field, eddy currents are produced in the mass which dissipates the mechanical motion. 
 
 \section{Centrifugal Force}
 
@@ -369,22 +369,48 @@ Figure \ref{centPlotFig} shows the Equation \ref{centEq} evaluated at a collecti
 
 Although this shift has little effect on many experiments, it allows torsion balances to use the Earth as a source mass at most latitudes. This is used in many equivalence principle tests as well as using torsion balances for geophysical exploration.
 
-\section{Double Pendulum} \label{double}
+%\section{Double Pendulum} \label{double}
+
+
 
 \chapter{Noise Sources and Mitigation}
+
+\quad Although experimenters try their hardest, torsion pendulums do not exist in the pristine environments we like to cook up on chalkboards. The have a long list of interactions with the universe that end up plaguing experiments. Calling an effect noise verses signal is a choice of viewpoint. Here we will assume the science being conducted is not related to the environment but is instead a novel force or a torque that's controlled by the experimenter. Of course noise can become signal if one was aiming to study one of these effects.
+
 \section{Thermal Noise} \label{thermal}
 
-\quad The fact that torsion balances are at finite temperature causes ever-present noise which is one of the most difficult to mitigate. 
+\quad The fact that torsion balances are at finite temperature causes ever-present ``thermal'' noise which is one of the most difficult to mitigate. There are multiple ways to view this noise source. On a microscopic level, it is caused by the thermal motion of the atoms that make up the torsion fiber. Abstracting a bit more, it is due to application of the fluctuation-dissipation theorem \cite{flucDis} to the torsion balance system.
 
-This thermal motion causes a torque that follows \cite{thermal}:
+This thermal motion causes a stochastic torque that follows \cite{thermal}:
 \begin{equation}
-\tau (\omega)= \sqrt{4 k_B T\bigg( \frac{\kappa}{Q} \bigg) \bigg( \frac{1}{\omega} \bigg)}
+\tau (\omega)= \sqrt{4 k_B T\bigg( \frac{\kappa}{Q} \bigg) \bigg( \frac{1}{\omega} \bigg)}\label{thermEq}
 \end{equation}
-where $k_B$ is Boltzman's constant, $T$ is the temperature, $\kappa$ is the spring constant, $Q$ is the quality factor, and $\omega$ is the angular frequency.
+where $k_B$ is Boltzman's constant, $T$ is the temperature, $\kappa$ is the spring constant, $Q$ is the quality factor, and $\omega$ is the angular frequency. Note that this torque noise follows $\sim 1/\sqrt{\omega}$ and thus increases in amplitude at lower frequencies. An example thermal noise is plotted in Figure \ref{noiseSpec} along with an example readout noise, Section \ref{readout}.
 
-There are three parameters that can altered to minimize this noise. For most torsion balances the temperature is set by the ambient temperature of the laboratory however, a few experimenter's have investigated cooling their apparatus to cryogenic temperatures \cite{cryo}. The other two, $\kappa$ and $Q$, are determined by the torsion fiber and thus readily engineered. 
+There are three parameters that can be altered to minimize this noise. For most torsion balances the temperature is set by the ambient temperature of the laboratory; however, a few experimenter's have investigated cooling their apparatus to cryogenic temperatures. The other two, $\kappa$ and $Q$, are determined by the torsion fiber and thus readily engineered. 
+
+We've already seen that minimizing the $\kappa$-value increases a torsion balance's sensitivity to torques but Equation \ref{thermEq} shows an additional benefit of lowering the amplitude of thermal noise. Additionally, maximizing the $Q$-value further decreases the amplitude. Although these techniques can decrease the influence of this noise on a given apparatus, thermal noise can never be completely avoided and limits the performance of many torsion balance apparatus.
 
 \section{Readout Noise}\label{readout}
+
+\quad The angle of the torsion balance needs to be measured in someway. In today's world, this is done almost exclusively with some sort of analog, precision measuring device communicating to a computer through a analog-to-digital converter (ADC). The measuring device can either directly measure the change in angle (autocollimator, optical levers, etc.) or measure the translation of a part of the pendulum (interferometers, capacitors, etc.). 
+
+If the device's native units are translation, then the measurements must be translated into angle using the following:
+
+\begin{equation}
+\sin\big(\theta(t)\big)\approx \theta(t)=\frac{x(t)}{a}
+\end{equation}
+where $x(t)$ is the recorded translation and $a$ is distance from the torsion fiber axis and the measurement point. In order to maximize the sensitivity of the experiment, astute experimenters who deploy such readout schemes place the measurement point as close to the edge of the pendulum as possible\footnote{Yet another place where large lever-arm helps the experiment.}, $a\approx R$. 
+
+
+
+\begin{figure}[!h]
+\begin{centering}
+\includegraphics[width=\textwidth]{NoiseSpectrum.pdf}
+\caption{Example torque-noise and equivalent angle-noise spectra assuming a readout angle spectrum of $\tilde{\theta}(\omega) = 1\ \text{nrad}/\sqrt{\text{Hz}}$ amplitude, $\kappa=10^{-8}\ \text{N m/rad}$, $Q=10^6$, $T=293\ \text{K}$, and $\omega_0=2\pi\ (0.1 \text{ Hz})$. The total observed noise of such a system would be the sum of the two contributions.}\label{noiseSpec}
+\end{centering}
+\end{figure}
+
 \section{Seismic Motion}
 \section{Electrostatic Couplings}\label{elect}
 \section{Magnetic Noise}
