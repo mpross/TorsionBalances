@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{hibbeler2003mechanics}
 Russell~Charles Hibbeler.
@@ -40,5 +40,11 @@ Herbert~B. Callen and Theodore~A. Welton.
 Peter~R. Saulson.
 \newblock Thermal noise in mechanical experiments.
 \newblock {\em Phys. Rev. D}, 42:2437--2445, Oct 1990.
+
+\bibitem{ross2020precision}
+Michael~P Ross.
+\newblock {\em Precision Mechanical Rotation Sensors for Terrestrial
+  Gravitational Wave Observatories}.
+\newblock PhD thesis, University of Washington, 2020.
 
 \end{thebibliography}

@@ -117,7 +117,7 @@ These features are the first example we've seen that expresses the significance 
 \end{centering}
 \end{figure}
 \pagebreak
-\section{Inertial Sensing}
+\section{Inertial Sensing}\label{inertSection}
 
 \quad A relatively newer use of torsion balances is for inertial sensing. Where as in the previous section we discussed torques acting on the pendulum, for inertial sensing the pendulum acts as an inertial proof mass. The goal of this mode is to measure the angular motion of structure that the pendulum is suspended from. These sorts of measurements have a wide range of application, from rotational seismology and seismic isolation to guidance systems and navigation. 
 
@@ -400,9 +400,9 @@ If the device's native units are translation, then the measurements must be tran
 \begin{equation}
 \sin\big(\theta(t)\big)\approx \theta(t)=\frac{x(t)}{a}
 \end{equation}
-where $x(t)$ is the recorded translation and $a$ is distance from the torsion fiber axis and the measurement point. In order to maximize the sensitivity of the experiment, astute experimenters who deploy such readout schemes place the measurement point as close to the edge of the pendulum as possible\footnote{Yet another place where large lever-arm helps the experiment.}, $a\approx R$. 
+where $x(t)$ is the recorded translation and $a$ is distance from the torsion fiber axis to the measurement point. In order to maximize the sensitivity of the experiment, astute experimenters who deploy such readout schemes place the measurement point as close to the edge of the pendulum as possible\footnote{Yet another place where large lever-arm helps the experiment.}, $a\approx R$. 
 
-
+The act of 
 
 \begin{figure}[!h]
 \begin{centering}
@@ -412,6 +412,32 @@ where $x(t)$ is the recorded translation and $a$ is distance from the torsion fi
 \end{figure}
 
 \section{Seismic Motion}
+
+\quad Even though we don't perceive it in our everyday lives, the ground is always moving. Whether from human activity, the oceans, or the atmosphere, ground motion is constantly being driven. This can be seen in Figure \ref{groundSpec} which displays the amplitude spectral density of typical horizontal seismometer readings \cite{ross2020precision}. Seismometers are spring-mass systems that use the same dynamics as those described in Section \ref{inertSection} to measure ground motion above their resonant frequency. 
+
+Different sources cause motion at distinct frequencies. Above 1 Hz the motion is typically dominated by anthropogenic sources. Whether it's fans from equipment and heating system or vibrations from cars, buses, and trains, human activity causes significant ground motion. This motion typically only appears above 1 Hz due the time scales of most human activity and the dominance of the oceanic microseism at lower frequencies. 
+
+There are persistent, long-wavelength pressure waves within the ocean's water column that are caused by the interference between atmospherically driven surface waves and the ocean floor. These pressure waves drive the dominant persistent ground motion seen everywhere on earth which we called the oceanic microseism (or just microseism for short). The exact amplitude and frequency content of this motion depends on oceanic weather but every seismometer on the surface of the earth senses a broad peak typically between 10 mHz - 1 Hz with peak amplitude of 0.1 - 1 $\mu$m/s/$\sqrt{\text{Hz}}$. At frequencies lower than $\sim$10 mHz, true ground motion is relatively low but seismometer readings become dominated by ground rotations. See Reference \cite{ross2020precision} for more details on ground rotations.
+
+\begin{figure}[!h]
+\begin{centering}
+\includegraphics[width=\textwidth]{GroundSpectrum.pdf}
+\caption{Amplitude spectral density of typical ground motion as recorded by a horizontal seismometer. \cite{ross2020precision} The spectrum is dominated by anthropengic motion above 1 Hz and the microseism between 30 mHz - 1 Hz. Below 30 mHz the spectrum is dominated by ground rotations caused by the atmosphere.}\label{groundSpec}
+\end{centering}
+\end{figure}
+
+In addition to the persistent ground motion, there are many sources of large, short-duration motion. The most obvious case is earthquakes but humans also cause such transient with construction activity, explosions (both for mining and weapons testing), etc. The motion caused by these events can be much larger than the spectrum shown in Figure \ref{groundSpec}. However, since these events are transient, many experiments are just paused until the motion stops. As long as the apparatus is not damaged than this only amounts to a loss of data taking time which is acceptable in many circumstances.
+
+The source of ground motion is not necessarily important for torsion balance experiments however, the apparatus must be isolated from this motion in order to achieve high sensitivity. Without isolation, ground motion would swamp any measurement and in many cases make the apparatus not function at all. There are a many methods to isolate from this motion but they broadly fit into two categories: active isolation and passive isolation. 
+
+Active isolation is the process of sensing either the ground motion or the motion of the apparatus and counteracting these motions with some sort of actuator. A system which senses ground motion is called a ``feed-forward'' system because the apparatus is moved based on what is expected to happen, whereas sensing the apparatus motion is called a ``feed-back'' system because the applied motion is based on what has already happened. The exact development of active isolation system falls under the study of control system which has an extensive history and literature from a wide range of fields. Typically these active systems can perform superbly but are limited by the quality of sensors and actuators that are deployed and cost a large sum of both money and development time. 
+
+Passive isolation systems on the other hand tend to be simple in their design. A passive system uses the dynamics of mechanical systems to isolate from motion. Classical examples of these systems are placing the apparatus on rubber or springs and hanging the apparatus from a pendulum. This causes the apparatus to become a oscillator system which has a response function like those shown in Figure \ref{respPlot}. Above the resonant frequency of the system, the motion of the apparatus is decreased by a factor of $\sim (\omega_0/\omega)^2$ where $\omega_0$ is the resonant frequency of the system and $\omega$ is the frequency of motion. If multiple passive systems are stacked than the motion is decreased by $\sim (\omega_0/\omega)^{2N}$ where $N$ is the number of systems.
+
+Torsion balances are inherently passive isolation systems. The dynamics of the swing degree of freedom, Section \ref{swing}, passively isolated the pendulum from horizontal motion. With the addition of a vertical spring at the suspension point, experimenters can also passively isolate from vertical motion. Historically, the combination of the inherent horizontal isolation and a vertical spring achieved sufficient isolation to make seismic motion subdominant except during abnormal conditions (earthquakes, construction nearby, etc.). 
+
+Many extremely sensitivity apparatus today are employing multiple layers of both active and passive seismic isolation. For example, the LIGO gravitational wave observatories deploy three layers of active isolation and four layers of passive in the form of a quadruple pendulum. How much and which types of isolation is up to the experimenter to decide while designing an apparatus based on the frequency of interest and the necessary sensitivity of the instrument.
+
 \section{Electrostatic Couplings}\label{elect}
 \section{Magnetic Noise}
 \section{Gas Damping} \label{gas}
