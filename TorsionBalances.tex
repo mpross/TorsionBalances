@@ -402,7 +402,9 @@ If the device's native units are translation, then the measurements must be tran
 \end{equation}
 where $x(t)$ is the recorded translation and $a$ is distance from the torsion fiber axis to the measurement point. In order to maximize the sensitivity of the experiment, astute experimenters who deploy such readout schemes place the measurement point as close to the edge of the pendulum as possible\footnote{Yet another place where large lever-arm helps the experiment.}, $a\approx R$. 
 
-The act of 
+The act of turning the analog angle measurement to a digital signal that computers can handle causes a noise called ``quantization'' noise. Analog signals are continuous but digital signals are quantized. To map an analog reading to a quantized digital signal, the ADC rounds the analog reading to the closest digital output allowed by the device. ADCs are built with a select number of allowed digital outputs depending on the number of bits that the ADC has and its voltage range. There are $2^n$ numbers that can be represented with $n$ bits. An ADC with 2 bits (4 values) and a voltage range of 0-6 V can only output the values 0,2,4,6. Commonly ADCs come in 8-bit (256 values), 16-bit (65,536 values), and 24-bit (16,777,216 values). 
+
+The rounding of the analog signal to one of the allowed ADC values can turn small fluctuation of the analog signal into large jumps between two ADC values, i.e. quantization noise. For example in our 2-bit ADC example, if the analog signal is exactly 3 V then the ADC would round up and output at 4. But if the 3 V fluctuated down by 1 $\mu$V (from thermal effects in the circuit, ambient electromagnetic waves, etc.) then the ADC would round down to 2. Run this over a period of time and the ADC would record a series of 4s and 2s with equal number of the two. This switching between ADC states is the cause of quantization noise. 
 
 \begin{figure}[!h]
 \begin{centering}
@@ -410,6 +412,17 @@ The act of
 \caption{Example torque-noise and equivalent angle-noise spectra assuming a readout angle spectrum of $\tilde{\theta}(\omega) = 1\ \text{nrad}/\sqrt{\text{Hz}}$ amplitude, $\kappa=10^{-8}\ \text{N m/rad}$, $Q=10^6$, $T=293\ \text{K}$, and $\omega_0=2\pi\ (0.1 \text{ Hz})$. The total observed noise of such a system would be the sum of the two contributions.}\label{noiseSpec}
 \end{centering}
 \end{figure}
+
+The exact level of the ADC noise depends of the details of the system but roughly follows:
+
+\begin{equation}
+n_\text{quant} \propto \frac{V_{\text{range}}}{2^n} \frac{1}{\sqrt{f_\text{samp}}}
+\end{equation}
+where $n_\text{quant}$ is the noise level, $V_{\text{range}}$ is the voltage range of the ADC, $n$ is the number of ADC bits, and $f_\text{samp}$ is the sampling frequency. Thus there are typically two paths to decrease the quantization noise of an instrument. The most straight forward way to to increase the bits of the ADC which makes the gaps between ADC numbers smaller. This tends to be limited by what ADCs are available on the market. The other way is to record at a faster sample rate. The faster data rate can allow the signal to be averaged to a lower rate, higher precision signal. The noise in this averaged signal decreases as the square root of the number of samples (faster rate equals more samples). This is also limited by the ADC on the market as they tend to have a maximum rate that they can be ran. But this can also depend of the rate of the downstream data pipeline. If the program used to record the data can't run as fast as the ADC then the program will be the limiter on the data rate.
+
+Quantization noise typically has a ``white'' spectrum (i.e. same value at all frequencies) that can limit the sensitivity of a readout if it has no other noise sources. This can be seen in Figure \ref{noiseSpec} which shows this readout noise along side an example thermal noise, Section \ref{thermal}. Notice that the readout noise is flat in angle units since that's the native units of the measurement but when converted to torque, the readout noise rises at high frequencies. The combination of the readout noise and thermal noise give many apparatus a bucket shaped torque noise sensitivity. In such systems, the highest sensitivity is when the two noise sources cross over. As such, experimenters can alter the parameters of the apparatus to place this minimum at the frequency of interest.
+
+Many realistic readouts are not only limited by quantization noise but also have noise caused by harder-to-model sources (electronics, sustainability to temperature changes, etc.). These can make a readout have a more complicated spectral shape. A common shape is a ``pink'' noise spectrum which follows $1/\sqrt{f}$ or $1/f$. Since these spectra are nearly flat, they also form a sensitivity bucket albeit with a steeper edge. Decreasing this sort of readout noise is more specific to the exact readout system but can range from using low-noise electronics and controlling or insulating from temperature changes to minimizing air currents and patch charges.
 
 \section{Seismic Motion}
 

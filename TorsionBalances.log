@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.4.5)  29 DEC 2021 13:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.4.5)  29 DEC 2021 14:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -279,34 +279,23 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 ]
 Chapter 4.
-[25]
-<NoiseSpectrum.pdf, id=360, 926.46124pt x 629.35126pt>
+[25] [26]
+<NoiseSpectrum.pdf, id=363, 926.46124pt x 629.35126pt>
 File: NoiseSpectrum.pdf Graphic file (type pdf)
 <use NoiseSpectrum.pdf>
-Package pdftex.def Info: NoiseSpectrum.pdf  used on input line 409.
+Package pdftex.def Info: NoiseSpectrum.pdf  used on input line 411.
 (pdftex.def)             Requested size: 345.0pt x 234.364pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[26]
-<GroundSpectrum.pdf, id=364, 711.65875pt x 507.8975pt>
+ [27 <./NoiseSpectrum.pdf>]
+<GroundSpectrum.pdf, id=492, 711.65875pt x 507.8975pt>
 File: GroundSpectrum.pdf Graphic file (type pdf)
 <use GroundSpectrum.pdf>
-Package pdftex.def Info: GroundSpectrum.pdf  used on input line 424.
+Package pdftex.def Info: GroundSpectrum.pdf  used on input line 437.
 (pdftex.def)             Requested size: 345.0pt x 246.21375pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Underfull \vbox (badness 1418) has occurred while \output is active []
-
- [27 <./NoiseSpectrum.pdf>] [28 <./GroundSpectrum.pdf>] [29] [30
-
-]
+ [28] [29 <./GroundSpectrum.pdf>] [30]
 Chapter 5.
-(./TorsionBalances.bbl [31] [32
+(./TorsionBalances.bbl [31
+
+] [32
 
 ]) [33] (./TorsionBalances.aux)
 
@@ -336,7 +325,7 @@ usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/te
 xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on TorsionBalances.pdf (33 pages, 796527 bytes).
+Output written on TorsionBalances.pdf (33 pages, 801649 bytes).
 PDF statistics:
  635 PDF objects out of 1000 (max. 8388607)
  549 compressed objects within 6 object streams

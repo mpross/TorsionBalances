@@ -15,11 +15,11 @@
 \contentsline {chapter}{\numberline {4}Noise Sources and Mitigation}{25}{}%
 \contentsline {section}{\numberline {4.1}Thermal Noise}{25}{}%
 \contentsline {section}{\numberline {4.2}Readout Noise}{26}{}%
-\contentsline {section}{\numberline {4.3}Seismic Motion}{26}{}%
-\contentsline {section}{\numberline {4.4}Electrostatic Couplings}{29}{}%
-\contentsline {section}{\numberline {4.5}Magnetic Noise}{29}{}%
-\contentsline {section}{\numberline {4.6}Gas Damping}{29}{}%
-\contentsline {section}{\numberline {4.7}Gravity Gradients}{29}{}%
+\contentsline {section}{\numberline {4.3}Seismic Motion}{28}{}%
+\contentsline {section}{\numberline {4.4}Electrostatic Couplings}{30}{}%
+\contentsline {section}{\numberline {4.5}Magnetic Noise}{30}{}%
+\contentsline {section}{\numberline {4.6}Gas Damping}{30}{}%
+\contentsline {section}{\numberline {4.7}Gravity Gradients}{30}{}%
 \contentsline {chapter}{\numberline {5}Data Analysis Techniques}{31}{}%
 \contentsline {section}{\numberline {5.1}Fourier Analysis}{31}{}%
 \contentsline {section}{\numberline {5.2}Linear Least-Squares Fitting}{31}{}%
