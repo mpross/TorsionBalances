@@ -47,4 +47,28 @@ Michael~P Ross.
   Gravitational Wave Observatories}.
 \newblock PhD thesis, University of Washington, 2020.
 
+\bibitem{Matula}
+R.~A. Matula.
+\newblock Electrical resistivity of copper, gold, palladium, and silver.
+\newblock {\em Journal of Physical and Chemical Reference Data},
+  8(4):1147--1298, 1979.
+
+\bibitem{serway}
+Raymond~A Serway and John~W Jewett.
+\newblock {\em Principles of physics}, volume~1.
+\newblock Saunders College Pub. Fort Worth, TX, 1998.
+
+\bibitem{resist}
+Wikipedia.
+\newblock Electrical resistivity and conductivity.
+
+\bibitem{tiox}
+AZo Materials.
+\newblock Titanium dioxide.
+
+\bibitem{slade}
+Paul~G Slade.
+\newblock {\em Electrical contacts: principles and applications}.
+\newblock CRC press, 2017.
+
 \end{thebibliography}

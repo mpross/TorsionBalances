@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.4.5)  30 DEC 2021 12:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.4.5)  23 FEB 2022 12:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -292,24 +292,28 @@ File: GroundSpectrum.pdf Graphic file (type pdf)
 Package pdftex.def Info: GroundSpectrum.pdf  used on input line 437.
 (pdftex.def)             Requested size: 345.0pt x 246.21375pt.
  [28] [29 <./GroundSpectrum.pdf>] [30]
+Underfull \vbox (badness 1270) has occurred while \output is active []
+
+ [31]
+[32]
 Chapter 5.
-(./TorsionBalances.bbl [31
+(./TorsionBalances.bbl [33
 
-] [32
+] [34
 
-]) [33] (./TorsionBalances.aux)
+]) [35] (./TorsionBalances.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2102 strings out of 481176
- 29806 string characters out of 5914227
- 308940 words of memory out of 5000000
- 19035 multiletter control sequences out of 15000+600000
+ 2108 strings out of 481176
+ 29856 string characters out of 5914227
+ 308971 words of memory out of 5000000
+ 19041 multiletter control sequences out of 15000+600000
  412897 words of font info for 63 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
- 68i,8n,74p,1108b,309s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 68i,9n,74p,1108b,309s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texl
@@ -325,10 +329,10 @@ usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/te
 xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on TorsionBalances.pdf (33 pages, 801860 bytes).
+Output written on TorsionBalances.pdf (35 pages, 808341 bytes).
 PDF statistics:
- 635 PDF objects out of 1000 (max. 8388607)
- 549 compressed objects within 6 object streams
+ 641 PDF objects out of 1000 (max. 8388607)
+ 553 compressed objects within 6 object streams
  0 named destinations out of 1000 (max. 500000)
  56 words of extra memory for PDF output out of 10000 (max. 10000000)
 

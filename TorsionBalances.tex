@@ -453,9 +453,44 @@ Many extremely sensitivity apparatus today are employing multiple layers of both
 
 \section{Electrostatic Couplings}\label{elect}
 
-\quad The electromagnetic force is $10^{40}$ times stronger than gravity. Since many torsion balance experiments are aimed at measuring gravity or forces weaker than gravity, electromagnetic interactions can easily swamp the interactions of interest. 
+\quad The electromagnetic force is $10^{40}$ times stronger than gravity. Since many torsion balance experiments are aimed at measuring gravity or forces weaker than gravity, electromagnetic interactions can easily swamp the interactions of interest. The primary method of eliminating these interactions is to ensure that the pendulum and the surrounding structure does not collect charge. 
+
+Whether from cosmic rays or interactions with residual gas, charges will naturally collect on every surface. The goal of the experimenter is to give these charges a path to flow to ground.\footnote{Both positive and negative net charges can be imparted on the pendulum. Realistically, only with excess electrons on the pendulum (negative charge) would charges flow to ground. With positive net charge, electrons flow from ground to the pendulum but this can be viewed as the flow of a deficit of electrons to ground.} Thus an ideal experiment would be made solely of perfect conductors which are connected to ground. This way any momentarily charge build up would flow quickly to ground leaving the apparatus with negligible effect.
+
+Unfortunately, short of making the apparatus out of pure superconductors (an immensely difficult task), real world experimenters don't have access to perfect conductors. Most metals are good conductors (low resistivity) yet have a non-zero resistivity. Table \ref{ResistTable} shows the resistivity for a collection of common pendulum materials. This causes imparted charges to flow to ground more slowly than a perfect conductor would allow. For most applications, this slow down of charge flow is much too fast to effect the apparatus. 
+
+The more insidious effect with most metals is that they are not chemically inert. Many common metals readily interact with the oxygen in the atmosphere and water to form oxides. This is why the Statue of Liberty is green and why iron turns to rust. Pieces built for scientific apparatus are typically machined shortly before they enter use. Yet oxide layers form on the exterior these piece almost instantaneously upon exposure to the atmosphere. As can be seen in Table \ref{ResistTable}, these oxides have much higher resistivity than the bulk material. Thus the surface layers discharge at a drastically slower rate effectively trapping charges in place.
+
+\begin{center}		
+	\begingroup
+	\setlength{\tabcolsep}{10pt} % Default value: 6pt
+	\renewcommand{\arraystretch}{1.5} % Default value: 1
+	\begin{table}[ht!]
+		\begin{center}
+			\begin{tabular}{ |c|c| }
+				\hline
+				Material & Resistivity, $\rho$ (n$\Omega$ m) \\
+				\hline
+				Copper (Cu) & $16.8$ \\
+				Copper Oxide (CuO) & $10^9-10^{10}$ \\
+				Aluminum (Al) & $28.2$\\
+				Aluminum Oxide (Al$_2$O$_3$) & $10^{19}-10^{25}$\\
+				Titanium (Ti) & $420$\\
+				Titanium Oxide (TiO$_2$) & $10^{20}-10^{24}$\\				
+				Gold (Au) & $22.1$\\
+				\hline
+				
+			\end{tabular}
+			\caption{Table of resistivity for a selection of typical materials at room temperature (20$^\circ$) \cite{Matula, serway, resist, tiox, slade}.}\label{ResistTable}
+		\end{center}
+	\end{table}
+	\endgroup
+\end{center}
+
+The common method to alleviate this effect is to coat the pieces in gold. Gold is a special metal because it does not interact with either air or water. This property is what has attracted humans to gold for millennia and allows archaeologist to find gold artifacts that are in nearly the exact condition as when they were made. Gold is also a good conductor and readily purchasable (albeit at a steep price). 
 
 \section{Magnetic Noise}
+\section{Temperature Variations}
 \section{Gas Damping} \label{gas}
 \section{Gravity Gradients}\label{gravGrad}
 
