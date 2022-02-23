@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.4.5)  23 FEB 2022 12:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.4.5)  23 FEB 2022 13:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -292,10 +292,7 @@ File: GroundSpectrum.pdf Graphic file (type pdf)
 Package pdftex.def Info: GroundSpectrum.pdf  used on input line 437.
 (pdftex.def)             Requested size: 345.0pt x 246.21375pt.
  [28] [29 <./GroundSpectrum.pdf>] [30]
-Underfull \vbox (badness 1270) has occurred while \output is active []
-
- [31]
-[32]
+[31] [32]
 Chapter 5.
 (./TorsionBalances.bbl [33
 
@@ -329,7 +326,7 @@ usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/te
 xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on TorsionBalances.pdf (35 pages, 808341 bytes).
+Output written on TorsionBalances.pdf (35 pages, 809303 bytes).
 PDF statistics:
  641 PDF objects out of 1000 (max. 8388607)
  553 compressed objects within 6 object streams
