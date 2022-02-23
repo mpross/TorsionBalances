@@ -205,7 +205,7 @@ where $\sigma$ is the yield strength of the material and $r$ is the cross-sectio
 \begin{equation}
 r_{\text{min}}=\sqrt{\frac{m g}{\pi \sigma}}
 \end{equation}
-where $m$ is the mass of the pendulum and $g$ is the local gravitational acceleration. A fiber of this radius could hold the pendulum but any further force (earthquake, anthropogenic forces, etc.) on the fiber would cause it to yield. Thus a safety factor is used to ensure the apparatus is robust against laboratory conditions.
+where $m$ is the mass of the pendulum and $g$ is the local gravitational acceleration. A fiber of this radius could hold the pendulum but any further force (Earthquake, anthropogenic forces, etc.) on the fiber would cause it to yield. Thus a safety factor is used to ensure the apparatus is robust against laboratory conditions.
 \begin{equation}
 r_{\text{safe}}=\eta \sqrt{\frac{m g}{\pi \sigma}}
 \end{equation}
@@ -430,7 +430,7 @@ Many realistic readouts are not only limited by quantization noise but also have
 
 Different sources cause motion at distinct frequencies. Above 1 Hz the motion is typically dominated by anthropogenic sources. Whether it's fans from equipment and heating system or vibrations from cars, buses, and trains, human activity causes significant ground motion. This motion typically only appears above 1 Hz due the time scales of most human activity and the dominance of the oceanic microseism at lower frequencies. 
 
-There are persistent, long-wavelength pressure waves within the ocean's water column that are caused by the interference between atmospherically driven surface waves and the ocean floor. These pressure waves drive the dominant persistent ground motion seen everywhere on earth which we called the oceanic microseism (or just microseism for short). The exact amplitude and frequency content of this motion depends on oceanic weather but every seismometer on the surface of the earth senses a broad peak typically between 10 mHz - 1 Hz with peak amplitude of 0.1 - 1 $\mu$m/s/$\sqrt{\text{Hz}}$. At frequencies lower than $\sim$10 mHz, true ground motion is relatively low but seismometer readings become dominated by ground rotations. See Reference \cite{ross2020precision} for more details on ground rotations.
+There are persistent, long-wavelength pressure waves within the ocean's water column that are caused by the interference between atmospherically driven surface waves and the ocean floor. These pressure waves drive the dominant persistent ground motion seen everywhere on Earth which we called the oceanic microseism (or just microseism for short). The exact amplitude and frequency content of this motion depends on oceanic weather but every seismometer on the surface of the Earth senses a broad peak typically between 10 mHz - 1 Hz with peak amplitude of 0.1 - 1 $\mu$m/s/$\sqrt{\text{Hz}}$. At frequencies lower than $\sim$10 mHz, true ground motion is relatively low but seismometer readings become dominated by ground rotations. See Reference \cite{ross2020precision} for more details on ground rotations.
 
 \begin{figure}[!h]
 \begin{centering}
@@ -439,7 +439,7 @@ There are persistent, long-wavelength pressure waves within the ocean's water co
 \end{centering}
 \end{figure}
 
-In addition to the persistent ground motion, there are many sources of large, short-duration motion. The most obvious case is earthquakes but humans also cause such transient with construction activity, explosions (both for mining and weapons testing), etc. The motion caused by these events can be much larger than the spectrum shown in Figure \ref{groundSpec}. However, since these events are transient, many experiments are just paused until the motion stops. As long as the apparatus is not damaged than this only amounts to a loss of data taking time which is acceptable in many circumstances.
+In addition to the persistent ground motion, there are many sources of large, short-duration motion. The most obvious case is Earthquakes but humans also cause such transient with construction activity, explosions (both for mining and weapons testing), etc. The motion caused by these events can be much larger than the spectrum shown in Figure \ref{groundSpec}. However, since these events are transient, many experiments are just paused until the motion stops. As long as the apparatus is not damaged than this only amounts to a loss of data taking time which is acceptable in many circumstances.
 
 The source of ground motion is not necessarily important for torsion balance experiments however, the apparatus must be isolated from this motion in order to achieve high sensitivity. Without isolation, ground motion would swamp any measurement and in many cases make the apparatus not function at all. There are a many methods to isolate from this motion but they broadly fit into two categories: active isolation and passive isolation. 
 
@@ -447,7 +447,7 @@ Active isolation is the process of sensing either the ground motion or the motio
 
 Passive isolation systems on the other hand tend to be simple in their design. A passive system uses the dynamics of mechanical systems to isolate from motion. Classical examples of these systems are placing the apparatus on rubber or springs and hanging the apparatus from a pendulum. This causes the apparatus to become a oscillator system which has a response function like those shown in Figure \ref{respPlot}. Above the resonant frequency of the system, the motion of the apparatus is decreased by a factor of $\sim (\omega_0/\omega)^2$ where $\omega_0$ is the resonant frequency of the system and $\omega$ is the frequency of motion. If multiple passive systems are stacked than the motion is decreased by $\sim (\omega_0/\omega)^{2N}$ where $N$ is the number of systems.
 
-Torsion balances are inherently passive isolation systems. The dynamics of the swing degree of freedom, Section \ref{swing}, passively isolated the pendulum from horizontal motion. With the addition of a vertical spring at the suspension point, experimenters can also passively isolate from vertical motion. Historically, the combination of the inherent horizontal isolation and a vertical spring achieved sufficient isolation to make seismic motion subdominant except during abnormal conditions (earthquakes, construction nearby, etc.). 
+Torsion balances are inherently passive isolation systems. The dynamics of the swing degree of freedom, Section \ref{swing}, passively isolated the pendulum from horizontal motion. With the addition of a vertical spring at the suspension point, experimenters can also passively isolate from vertical motion. Historically, the combination of the inherent horizontal isolation and a vertical spring achieved sufficient isolation to make seismic motion subdominant except during abnormal conditions (Earthquakes, construction nearby, etc.). 
 
 Many extremely sensitivity apparatus today are employing multiple layers of both active and passive seismic isolation. For example, the LIGO gravitational wave observatories deploy three layers of active isolation and four layers of passive in the form of a quadruple pendulum. How much and which types of isolation is up to the experimenter to decide while designing an apparatus based on the frequency of interest and the necessary sensitivity of the instrument.
 
@@ -491,7 +491,17 @@ The common method to alleviate this effect is to coat the pieces in gold. Gold i
 
 Gold-coating the pendulum and any close by surface substantially decreases the electrostatic interactions. However, impurities with the gold layer can cause higher order effects. Impurities in the gold can cause patches of the gold to be at slightly different potential as the rest of the layer. The effect of these patch-charges is only apparent at distances at the same scale as the size of the patches. At large distances, small spatial variations of the potential are washed out since more of the pendulum is in view. Experiments where surfaces must be close-by (e.g. short-range tests of gravity) patch-charge interactions can cause excess coupling and thus noise in the instrument.
 
-\section{Magnetic Noise}
+\section{Magnetic Interactions}
+
+\quad For the same reason that electrostatic coupling is a worry ($10^{40}$ is a large number), experimenter's must also carefully manage magnetic interactions. The lowest order magnetic interaction between a pendulum and the environment follows:
+
+\begin{equation}
+\vec{\tau}_{\text{mag}} =\vec{\mu} \times \vec{B}
+\end{equation}
+where $\vec{\tau}_{\text{mag}}$ is the torque on the pendulum from the magnetic interaction, $\vec{\mu}$ is the pendulum's magnetic dipole moment, and $\vec{B}$ is the external magnetic field. There are two ways to decrease this interaction: decrease the external magnetic field and decrease the magnetic dipole moment of the pendulum. 
+
+The zeroth-order method of minimizing the external magnetic field is to remove any permanent magnetics from the apparatus or located nearby. Once that's complete, the largest magnetic field in most lab settings is that from the Earth's core. The magnitude of the Earth's magnetic field ranges between 25-65~$\mu$T depending on geographic location \cite{earthMag} and can vary by up to 25~nT per day and $\sim$1~nT on the few seconds time scale. \cite{earthMagVar}
+
 \section{Temperature Variations}
 \section{Gas Damping} \label{gas}
 \section{Gravity Gradients}\label{gravGrad}

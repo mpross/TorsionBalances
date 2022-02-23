@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.4.5)  23 FEB 2022 13:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.4.5)  23 FEB 2022 13:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -298,16 +298,22 @@ Chapter 5.
 
 ] [34
 
-]) [35] (./TorsionBalances.aux)
+] [35]
+Underfull \hbox (badness 1394) in paragraph at lines 86--89
+[]\OT1/cmr/m/n/10 Janez Stepi et al.  Spec-troscopy: Nmr down to earth.  \OT1/c
+mr/m/it/10 Na-ture\OT1/cmr/m/n/10 ,
+ []
+
+) [36] (./TorsionBalances.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2108 strings out of 481176
- 29856 string characters out of 5914227
- 308971 words of memory out of 5000000
- 19041 multiletter control sequences out of 15000+600000
+ 2112 strings out of 481176
+ 29895 string characters out of 5914227
+ 308979 words of memory out of 5000000
+ 19045 multiletter control sequences out of 15000+600000
  412897 words of font info for 63 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  68i,9n,74p,1108b,309s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -326,10 +332,10 @@ usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/te
 xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on TorsionBalances.pdf (35 pages, 809303 bytes).
+Output written on TorsionBalances.pdf (36 pages, 812087 bytes).
 PDF statistics:
- 641 PDF objects out of 1000 (max. 8388607)
- 553 compressed objects within 6 object streams
+ 644 PDF objects out of 1000 (max. 8388607)
+ 555 compressed objects within 6 object streams
  0 named destinations out of 1000 (max. 500000)
  56 words of extra memory for PDF output out of 10000 (max. 10000000)
 

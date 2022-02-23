@@ -71,4 +71,20 @@ Paul~G Slade.
 \newblock {\em Electrical contacts: principles and applications}.
 \newblock CRC press, 2017.
 
+\bibitem{earthMag}
+C.~C. Finlay, S.~Maus, C.~D. Beggan, T.~N. Bondar, A.~Chambodut, T.~A.
+  Chernova, A.~Chulliat, V.~P. Golovkov, B.~Hamilton, M.~Hamoudi, R.~Holme,
+  G.~Hulot, W.~Kuang, B.~Langlais, V.~Lesur, F.~J. Lowes, H.~Lühr,
+  S.~Macmillan, M.~Mandea, S.~McLean, C.~Manoj, M.~Menvielle, I.~Michaelis,
+  N.~Olsen, J.~Rauberg, M.~Rother, T.~J. Sabaka, A.~Tangborn,
+  L.~Tøffner-Clausen, E.~Thébault, A.~W.~P. Thomson, I.~Wardinski, Z.~Wei,
+  and T.~I. Zvereva.
+\newblock {International Geomagnetic Reference Field: the eleventh generation}.
+\newblock {\em Geophysical Journal International}, 183(3):1216--1230, 12 2010.
+
+\bibitem{earthMagVar}
+Janez Stepi et~al.
+\newblock Spectroscopy: Nmr down to earth.
+\newblock {\em Nature}, 439(7078):799--802, 2006.
+
 \end{thebibliography}
