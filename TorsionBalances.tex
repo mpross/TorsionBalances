@@ -508,6 +508,76 @@ The zeroth-order method of minimizing the external magnetic field is to remove a
 
 \chapter{Data Analysis Techniques}
 \section{Fourier Analysis}
+
+\quad Fourier analysis is the workhorse analysis technique for torsion balance experiments. It consists of breaking the time series of some data into an infinite sum of sinusoidal functions. Typically, the signal of interest for torsion balances is modulated either naturally (e.g. Earth's rotation) or by the experimenter. Thus the analysis for many experiments boils down to extracting the amplitude of a sinusoidal signal. Additionally, the frequency dependent noise of an instrument is the common figure-of-merit when assessing the performance of an apparatus. These make Fourier analysis an unparalleled tool for torsion balance experimentalists.
+
+Let's say we have a data stream of measurements from an apparatus, $x(t)$, and we want to know the frequency content of the data. To evaluate this at all frequencies we would take the Fourier Transform (FT):
+\begin{equation}
+\tilde x (\omega) = \int_{-\infty}^\infty x(t) e^{-i \omega t } dt \label{FT}
+\end{equation}
+where $\tilde x (\omega)$ is the Fourier amplitude and $\omega= 2\pi f$ is the angular frequency. The Fourier amplitude is a complex number which gives the amplitude and phase of the sinusoidal component of the data at $\omega$. This becomes clear if we expand the exponential in Equation \ref{FT} using Euler's formula:
+\begin{equation}
+\tilde x_R (\omega) +i \tilde x_I (\omega) = \int_{-\infty}^\infty x(t) \cos(\omega t) dt - i \int_{-\infty}^\infty x(t) \sin(\omega t) dt 
+\end{equation}
+where $\tilde x_R (\omega)$ and $\tilde x_I (\omega)$ are respectively the real and imaginary parts of $\tilde x (\omega)$. Thus the real part of $\tilde x (\omega)$ represents the cosine amplitude while the imaginary part represents the sine amplitude. These can be transformed into amplitude and phase, $\varphi$, using:
+\begin{equation}
+|\tilde x (\omega)|=\sqrt{\tilde x_R (\omega)^2 + \tilde x_I (\omega)^2}
+\end{equation}
+
+\begin{equation}
+\varphi_x (\omega)=\arctan \bigg( \frac{\tilde x_I (\omega)}{\tilde x_R (\omega)} \bigg)
+\end{equation}
+
+To transform back to the time series we can take the Inverse Fourier Transform (IFT):
+\begin{equation}
+x(t) = \frac{1}{2\pi}\int_{-\infty}^\infty \tilde x (\omega) e^{i \omega t } d\omega \label{FT}
+\end{equation}
+
+Unfortunately, the continuous Fourier transform can not accurately be applied to a real world data set. Data sets are not continuous functions but are instead discrete vectors of measurements recorded at regular intervals. Whereas before we had a continuous function, $x(t)$, really we must analyze a discrete set, $x(t_j)$, of length $N$. Here $t_j= [0, 1, ..., N-1]/f_s$ is the vector of times corresponding to each data point with $f_s$ being the sampling frequency. With discrete data we can use the Discrete Fourier Transform (DFT):
+\begin{equation}
+\tilde x (\omega_n) = \sum_{j=0}^{N-1} x(t_j) e^{-i \omega_n t_j} \label{DFT}
+\end{equation}
+where $\omega_n= 2\pi f_s/N \times [1, ..., N]$. This has the same interpretation as the Fourier transform, $\tilde x (\omega_n)$ represents the cosine and sine amplitudes with frequency $\omega_n$, but now we are restricted to a discrete set of frequencies. 
+
+Notice that we can only extract Fourier amplitudes for frequencies between $f_s/N$ and $f_s$ at steps of $f_s/N$. This has major implications for choosing the amount of time to run an experiment and the rate at which data is taken. Since the highest frequency one can extract is at $f_s$, the experimenter must ensure that the sampling frequency is well above the frequency of interest. Additionally, $f_s/N$ is equivalent to the the total time span of the data so the apparatus must take data long enough to ensure that $f_s/N$ is lower than the frequency of interest. Both of these situations make intuitive sense. For example, if an experiment is trying to measure a signal that oscillates once per day then it must take data for at least a day in order to see it. Additionally, if the data is only taken once a day then the apparatus would not be able to sense the difference throughout the day.
+
+One significant downside of the discrete Fourier transform is that the amplitude is dependent on the number of data points that are used (i.e. the bin width $f_s/N$). Thus measurements of different lengths yield different resulting spectra. This confuses the interpretation of spectra if comparing data sets of different size. These issues are alleviated by analyzing the Power Spectral Density (PSD):
+
+\begin{equation}
+PSD (\omega_n) = \frac{1}{N f_s} \bigg| \sum_{j=0}^{N-1} x(t_j) e^{-i \omega_n t_j} \bigg|^2 \label{PSD}
+\end{equation}
+
+The Power Spectral Density is normalized by the length of the data and the sampling frequency to yield measurements that are independent of the length of data and the sampling frequency. This allows us to directly compare results from different data sets and even different instruments. Also note that the PSD is always real valued instead the complex. This normalization comes with a change in units. While the DFT is in the native units of the data stream, the PSD will be in native units squared over frequency. For example, if $x(t_j)$ is in meters then $\tilde x (\omega_n)$ will also be in meters while the PSD will be in meters$^2$/Hz. To get closer to the native units, we can analyze the Amplitude Spectral Density (ASD):
+\begin{equation}
+ASD (\omega_n) = \sqrt{\frac{1}{N f_s} \bigg| \sum_{j=0}^{N-1} x(t_j) e^{-i \omega_n t_j} \bigg|^2} \label{PSD}
+\end{equation}
+
+Note that the DFT, PSD, and the ASD are all related ($PSD = 1/(Nf_s) |DFT|^2$ and $ASD = \sqrt{PSD}$) and contain the same information. The primary difference is the ease of interpretation with the PSD and ASD. Although the normalization of the PSD takes out the dependence on the sampling frequency and number of data points, the measurement of the amplitude of coherent signals with all three methods depends on the number of periods. The amplitude of coherent signals will grow as $\sqrt{\text{number of periods}}$ while incoherent signals will not change.
+
+Let's look at an example data series to see how to analyze the spectra that comes out of these analysis techniques. We will focus on analyzing the ASD as it is the most common spectrum type used for torsion balance experiments. If we have a data stream of distance measurement that has the following form:
+\begin{equation}
+x(t_j) = a \sin(\omega_0 t_j) + b n_j
+\end{equation}
+where $a$ and $\omega_0$ are the amplitude and angular frequency of the sinusoidal (coherent) signal, $b$ is the noise amplitude, and $n_j$ is is the incoherent noise as shown in Figure \ref{SpecTime}. 
+
+\begin{figure}[!h]
+\begin{centering}
+\includegraphics[width=\textwidth]{SpecTime.pdf}
+\caption{Time series of example distance measurements with $a=3$ m, $b=1$ m, and $\omega_0=2\pi\ (0.1$ Hz).}\label{SpecTime}
+\end{centering}
+\end{figure}
+
+The corresponding Amplitude Spectral Density is shown in Figure \ref{SpecASD}. The spectrum shown a white (frequency independent) noise spectrum and a spike at $f=0.1$ Hz. The amplitude of the noise in the spectrum is directly $b = 1$ m while the amplitude of the spike which corresponds to the sinusoidal signal is different from the input parameter ($a=3$ m). However, if we did not know the form of the signal then we could use the spectrum to tell us that it is the sum of a frequency independent noise plus a sinusoidal signal at 0.1 Hz.
+
+\begin{figure}[!h]
+\begin{centering}
+\includegraphics[width=\textwidth]{SpecASD.pdf}
+\caption{Amplitude spectral density of example distance measurements with $a=3$ m, $b=1$ m, and $\omega_0=2\pi\ (0.1$ Hz).}\label{SpecASD}
+\end{centering}
+\end{figure}
+
+Realistic spectra can be significantly more complicated than the one analyzed here. There can be many sinusoidal signals, frequency dependent (pink) noise, or large semi-coherent bumps. What the spectrum allows the experimenter to separate out all of the structures that make up the signal where as the time series would be essentially uninterpretable. An experienced experimenter can guess at the nature of the various spectral structure to allow an in-depth understanding of a given apparatus with a single plot.
+
 \section{Linear Least-Squares Fitting}
 
 \bibliographystyle{unsrt}
