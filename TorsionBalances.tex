@@ -528,6 +528,7 @@ where $\tilde x_R (\omega)$ and $\tilde x_I (\omega)$ are respectively the real 
 \varphi_x (\omega)=\arctan \bigg( \frac{\tilde x_I (\omega)}{\tilde x_R (\omega)} \bigg)
 \end{equation}
 
+
 To transform back to the time series we can take the Inverse Fourier Transform (IFT):
 \begin{equation}
 x(t) = \frac{1}{2\pi}\int_{-\infty}^\infty \tilde x (\omega) e^{i \omega t } d\omega \label{FT}
@@ -538,6 +539,7 @@ Unfortunately, the continuous Fourier transform can not accurately be applied to
 \tilde x (\omega_n) = \sum_{j=0}^{N-1} x(t_j) e^{-i \omega_n t_j} \label{DFT}
 \end{equation}
 where $\omega_n= 2\pi f_s/N \times [1, ..., N]$. This has the same interpretation as the Fourier transform, $\tilde x (\omega_n)$ represents the cosine and sine amplitudes with frequency $\omega_n$, but now we are restricted to a discrete set of frequencies. 
+
 
 Notice that we can only extract Fourier amplitudes for frequencies between $f_s/N$ and $f_s$ at steps of $f_s/N$. This has major implications for choosing the amount of time to run an experiment and the rate at which data is taken. Since the highest frequency one can extract is at $f_s$, the experimenter must ensure that the sampling frequency is well above the frequency of interest. Additionally, $f_s/N$ is equivalent to the the total time span of the data so the apparatus must take data long enough to ensure that $f_s/N$ is lower than the frequency of interest. Both of these situations make intuitive sense. For example, if an experiment is trying to measure a signal that oscillates once per day then it must take data for at least a day in order to see it. Additionally, if the data is only taken once a day then the apparatus would not be able to sense the difference throughout the day.
 
@@ -577,6 +579,7 @@ The corresponding Amplitude Spectral Density is shown in Figure \ref{SpecASD}. T
 \end{figure}
 
 Realistic spectra can be significantly more complicated than the one analyzed here. There can be many sinusoidal signals, frequency dependent (pink) noise, or large semi-coherent bumps. What the spectrum allows the experimenter to separate out all of the structures that make up the signal where as the time series would be essentially uninterpretable. An experienced experimenter can guess at the nature of the various spectral structure to allow an in-depth understanding of a given apparatus with a single plot.
+
 
 \section{Linear Least-Squares Fitting}
 
