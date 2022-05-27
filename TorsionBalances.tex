@@ -583,6 +583,34 @@ Realistic spectra can be significantly more complicated than the one analyzed he
 
 \section{Linear Least-Squares Fitting}
 
+\quad Although Fourier analysis is often used to analyze the data from an apparatus, extracting accurate measurements from a spectrum can be troublesome. The amplitudes pulled off a spectrum must be corrected for a handful of effects in order to yield accurate results. This alleviated by deploying linear least-squares fitting.
+
+Whenever an experimenter goes about fitting data, they are minimizing some sort of error function. There are many choices from depending on the application but the one widely used in torsion balance experiments is the least-squares. Let's say we want to fit data set, $y(t_i)$, that is $n$-points long to the linear combination of $m$ functions, $f(t_i)_m$. The fit approximation the data set would be:
+\begin{equation}
+\hat{y}(t_i)=\sum_m a_m f_m(t_i)\label{hat}
+\end{equation} 
+where $\hat{y}$ is the fit approximation of the data and $a_m$ are the weights. To make the mathematics easier, we can vectorize Equation \ref{hat} by defining the following:
+\begin{align}
+\vec{y}&=[y(t_1)\ y(t_1)\ ...\ y(t_n)]\\
+\vec{w}&=[a_1\ a_2\ ...\ a_m]\\
+\mathbf{X}  &= [f_1(t_i)\  f_2(t_i)\ ...\ f_m(t_i) ]\\
+\hat{\vec{y}}&=\vec{w}\ \mathbf{X}
+\end{align}
+Notice that $\vec{y}$ is a $1\times n$ vector, $\vec{w}$ is a $1\times m$ vector, and $\mathbf{X}$ is a $m\times n$ matrix.
+
+A good fit is defined as the fit that minimizes the least-squares error:
+\begin{equation}
+\epsilon = \big(\vec{y}-\hat{\vec{y}} \big)^2 \ =\big(\vec{y}-\vec{w}\ \mathbf{X} \big)^2 \label{ls}
+\end{equation} 
+Once we choose the functions that we want to fit to the only parameter that can vary in Equation \ref{ls} is $\vec{w}$. Thus to find the fit that minimizes the least-squares error we can differentiate Equation \ref{ls} with respect to $\vec{w}$ and setting it to zero. Then solving for $\vec{w}$ simplifies to the following: 
+\begin{equation}
+\vec{w} = \big(\mathbf{X}^T \mathbf{X} \big)^{-1}\ \mathbf{X}^T\vec{y} \label{lls}
+\end{equation} 
+
+Equation \ref{lls} shows that using linear least-squares fitting is as simple as constructing the correct matrices and then multiplying them together. This has two primary benefits: the calculation is very fast on a computer and, for a given set of data and functions, the solution to linear least-squares fitting is always the same. This is in contrast to non-linear fitting algorithms which numerically minimize an error function which is both computationally intensive and never leads the exact same answer.
+
+
+
 \bibliographystyle{unsrt}
 \bibliography{TorsionBalances}
 
