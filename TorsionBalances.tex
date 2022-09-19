@@ -42,7 +42,7 @@ where $\theta_0$ is the equilibrium angle of the torsion balance. For most situa
 
 Due to historical reasons, the classical example of a torsion balance is a dumb-bell shaped pendulum suspended from a thin metal fiber, shown in Figure~\ref{simpleFig}. The pendulum is formed by a massless rod with two equal mass "test masses" attached to each end. The torsion fiber is then attached to the rod at equal distance to each test mass. This provides a prototypical model of a torsion balance which we will analyze in detail. Modern torsional balance apparatus typically have pendulums with more complex geometry and may have multiple suspension stages. 
 
-\section{Loss Terms}
+\section{Loss Terms}\ref{loss}
 
 \quad There are two primary sources of loss in torsion balances: external and internal damping. External damping, sometimes called velocity damping, is caused by external forces acting on the pendulum that are proportional to the angular velocity of the pendulum, such as air friction. Internal damping, on the other hand, is caused by energy dissipation internal to the torsion fiber.
 
@@ -540,6 +540,21 @@ where $\Delta L$ is the change in length, $L$ is the length, $\alpha_L$ is the c
 \end{center}
 
 \section{Gas Damping} \label{gas}
+
+If a pendulum is immersed in a fluid (i.e. the atmosphere) then motion of the pendulum is resisted by drag. As mentioned in Section \ref{loss}, this can be modeled with:
+\begin{equation}
+\tau_{\text{vel}}(t) = -\gamma \dot{\theta}(t)
+\end{equation}
+where $\tau_{\text{vel}}$ is the damping torque, $\gamma$ is the damping coefficient, and $\dot{\theta}$ is the angular velocity of the pendulum. If we ignore internal damping, this causes the equation of motion of the pendulum to follow:
+\begin{equation}
+ \tilde{\theta}(\omega)= \frac{\tau_{\text{ext}}(\omega)}{\kappa}\frac{1}{1-\omega^2/\omega_0^2 +i\gamma\omega/\kappa} \label{gasEOM}
+\end{equation}
+Notice that the last term in the denominator of the response function is now frequency dependent. This causes the response to follow $\Lambda(\omega)=1-i\gamma \omega /\kappa$ if $\omega<<\omega_0$ instead of unity. This along with the fact that there are convection currents which apply torque on the balance in atmosphere, requires nearly all torsion balances to placed inside a vacuum chamber.
+
+Vacuum chambers are simply air tight containers than can withstand the pressure of the atmosphere. They can be in the form of glass bell jars or metal chambers. They are evacuated using a series of pumps depending on the desired final residual pressure. The first stage is called the roughing pump which can be a variety of types (scroll, diaphragm, oil, etc.) which will typically take the chamber down to $\sim10^{-2}$ mbar\footnote{There are a unusually large number of units used for pressure in today's world. Here we'll use mbar but torr, Pa, psi, and atm are also common. For reference 1 Pa = $10^{-2}$ mbar $\approx7.50\times10^{-3}$ Torr $\approx1.45\times10^{-4}$ psi $\approx9.87\times10^{-6}$ atm}. To get to high vacuum ($10^{-3} - 10^{-6}$ mbar) a turbo is attached to the roughing pump. Turbos are effectively miniature jet engines that are extremely effective at removing residual pressure and can usually take a chamber down to $\sim10^{-6}$ mbar. For ultra-high vacuum ($\leq10^{-9}$ mbar), one must employ either ion-pumps that use electromagnetic forces to embed residual gas into a getter material or cryo-pumps that freeze gas onto there surface. 
+
+Roughing pumps are the only pumps that can handle starting at atmospheric pressure. Turbos will overheat, cryo-pumps will boil, and ion-pumps will arc if ran at atmosphere. Thus the various pumps are turned on in stages starting with the roughing pump. Once the chamber reaches $\sim10^{-2}$ mbar the turbo is turned on. Once the turbo spins up and the pressure reaches $\sim10^{-6}$ mbar an ion or cyro pump can be turned on. With chambers that have a minimal leak rate, once the ion or cyro pump is running the turbo and roughing pump can be valved off and removed. This eliminates a significant source of vibrations that can effect precision experiments.
+
 \section{Gravity Gradients}\label{gravGrad}
 
 \chapter{Data Analysis Techniques}
