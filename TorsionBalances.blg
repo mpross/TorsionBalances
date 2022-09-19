@@ -3,44 +3,44 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: TorsionBalances.aux
 The style file: unsrt.bst
 Database file #1: TorsionBalances.bib
-You've used 19 entries,
+You've used 20 entries,
             1791 wiz_defined-function locations,
-            541 strings with 5669 characters,
-and the built_in function-call counts, 3475 in all, are:
-= -- 251
-> -- 195
+            549 strings with 5823 characters,
+and the built_in function-call counts, 3690 in all, are:
+= -- 270
+> -- 203
 < -- 1
-+ -- 76
-- -- 57
-* -- 199
-:= -- 570
-add.period$ -- 48
-call.type$ -- 19
-change.case$ -- 15
++ -- 79
+- -- 59
+* -- 215
+:= -- 605
+add.period$ -- 51
+call.type$ -- 20
+change.case$ -- 16
 chr.to.int$ -- 0
-cite$ -- 19
-duplicate$ -- 136
-empty$ -- 377
-format.name$ -- 57
-if$ -- 757
+cite$ -- 20
+duplicate$ -- 145
+empty$ -- 399
+format.name$ -- 59
+if$ -- 804
 int.to.chr$ -- 0
-int.to.str$ -- 19
-missing$ -- 12
-newline$ -- 89
-num.names$ -- 19
-pop$ -- 75
+int.to.str$ -- 20
+missing$ -- 13
+newline$ -- 94
+num.names$ -- 20
+pop$ -- 76
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 89
+skip$ -- 93
 stack$ -- 0
-substring$ -- 150
-swap$ -- 20
+substring$ -- 168
+swap$ -- 21
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 28
-width$ -- 21
-write$ -- 174
+while$ -- 30
+width$ -- 22
+write$ -- 185

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2021.4.27)  19 SEP 2022 11:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2021.4.27)  19 SEP 2022 12:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -336,39 +336,39 @@ Package pdftex.def Info: GroundSpectrum.pdf  used on input line 437.
 
 LaTeX Warning: Reference `loss' on page 33 undefined on input line 544.
 
-[33] [34]
-Chapter 5.
-[35
+[33] [34] [35] [36
 
-] [36]
-Overfull \hbox (9.10275pt too wide) in paragraph at lines 608--609
+]
+Chapter 5.
+[37] [38]
+Overfull \hbox (9.10275pt too wide) in paragraph at lines 621--622
 []\OT1/cmr/m/n/10 Note that the DFT, PSD, and the ASD are all re-lated ($\OML/c
 mm/m/it/10 PSD \OT1/cmr/m/n/10 = 1\OML/cmm/m/it/10 =\OT1/cmr/m/n/10 (\OML/cmm/m
 /it/10 Nf[]\OT1/cmr/m/n/10 )\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 DFT\OMS/cmsy/m/n
 /10 j[]$
  []
 
-<SpecTime.pdf, id=594, 703.62875pt x 325.215pt>
+<SpecTime.pdf, id=602, 703.62875pt x 325.215pt>
 File: SpecTime.pdf Graphic file (type pdf)
 <use SpecTime.pdf>
-Package pdftex.def Info: SpecTime.pdf  used on input line 618.
+Package pdftex.def Info: SpecTime.pdf  used on input line 631.
 (pdftex.def)             Requested size: 345.0pt x 159.45598pt.
-[37 <./SpecTime.pdf>]
-<SpecASD.pdf, id=616, 703.62875pt x 432.61626pt>
+[39 <./SpecTime.pdf>]
+<SpecASD.pdf, id=622, 703.62875pt x 432.61626pt>
 File: SpecASD.pdf Graphic file (type pdf)
 <use SpecASD.pdf>
-Package pdftex.def Info: SpecASD.pdf  used on input line 627.
+Package pdftex.def Info: SpecASD.pdf  used on input line 640.
 (pdftex.def)             Requested size: 345.0pt x 212.11584pt.
- [38 <./SpecASD.pdf>] (./TorsionBalances.bbl [39] [40
+ [40 <./SpecASD.pdf>] (./TorsionBalances.bbl [41] [42
 
 ]
-[41]
+[43]
 Underfull \hbox (badness 1394) in paragraph at lines 86--89
 []\OT1/cmr/m/n/10 Janez Stepi et al.  Spec-troscopy: Nmr down to earth.  \OT1/c
 mr/m/it/10 Na-ture\OT1/cmr/m/n/10 ,
  []
 
-) [42] (./TorsionBalances.aux)
+) [44] (./TorsionBalances.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -377,10 +377,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2298 strings out of 492615
- 31383 string characters out of 6131390
- 99070 words of memory out of 5000000
- 6164 multiletter control sequences out of 15000+600000
+ 2299 strings out of 492615
+ 31393 string characters out of 6131390
+ 99074 words of memory out of 5000000
+ 6165 multiletter control sequences out of 15000+600000
  13726 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,12n,25p,1206b,307s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -402,10 +402,10 @@ exmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/font
 s/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /public/amsfonts/cm/cmti10.pfb>
-Output written on TorsionBalances.pdf (42 pages, 926312 bytes).
+Output written on TorsionBalances.pdf (44 pages, 929561 bytes).
 PDF statistics:
- 754 PDF objects out of 1000 (max. 8388607)
- 653 compressed objects within 7 object streams
+ 761 PDF objects out of 1000 (max. 8388607)
+ 658 compressed objects within 7 object streams
  0 named destinations out of 1000 (max. 500000)
  66 words of extra memory for PDF output out of 10000 (max. 10000000)
 

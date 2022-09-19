@@ -95,4 +95,10 @@ Wikipedia.
 Engineering ToolBox.
 \newblock Thermal expansion - linear expansion coefficients.
 
+\bibitem{gravGrad}
+Julian Stirling and Stephan Schlamminger.
+\newblock Closed form expressions for gravitational multipole moments of
+  elementary solids.
+\newblock {\em Phys. Rev. D}, 100:124053, Dec 2019.
+
 \end{thebibliography}
