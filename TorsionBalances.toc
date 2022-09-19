@@ -19,8 +19,8 @@
 \contentsline {section}{\numberline {4.4}Electrostatic Couplings}{30}% 
 \contentsline {section}{\numberline {4.5}Magnetic Interactions}{32}% 
 \contentsline {section}{\numberline {4.6}Temperature Variations}{32}% 
-\contentsline {section}{\numberline {4.7}Gas Damping}{32}% 
-\contentsline {section}{\numberline {4.8}Gravity Gradients}{32}% 
-\contentsline {chapter}{\numberline {5}Data Analysis Techniques}{33}% 
-\contentsline {section}{\numberline {5.1}Fourier Analysis}{33}% 
-\contentsline {section}{\numberline {5.2}Linear Least-Squares Fitting}{34}% 
+\contentsline {section}{\numberline {4.7}Gas Damping}{33}% 
+\contentsline {section}{\numberline {4.8}Gravity Gradients}{33}% 
+\contentsline {chapter}{\numberline {5}Data Analysis Techniques}{35}% 
+\contentsline {section}{\numberline {5.1}Fourier Analysis}{35}% 
+\contentsline {section}{\numberline {5.2}Linear Least-Squares Fitting}{38}% 
