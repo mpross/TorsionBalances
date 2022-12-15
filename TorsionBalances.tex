@@ -3,19 +3,47 @@
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{graphicx}
+\usepackage{epigraph}
+\usepackage{txfonts}
+\usepackage[type={CC}, modifier={by-nc},  version={4.0}]{doclicense}
 %\usepackage[paperwidth=5.125in, paperheight=8.25in]{geometry}
 
 \begin{document}
 
-\title{Torsion Balances:\\An Experimenter's Handbook}
+\pagenumbering{gobble}
+
+\title{Essentials of Torsion Balances}
 \author{M.P.Ross for the E\"ot-Wash Group \\ University of Washington}
 
 \maketitle
 
+
+\begin{center}
+\large{\copyright\ Copyright \the\year{} 
+
+M.P. Ross}
+\end{center}
+
+\vfill
+\doclicenseThis
+
+\pagebreak
+
+\epigraph{It was just a simple, straight stick that I used as instrument, specially loaded at both ends, enclosed into a metal sheath to protect it from the wind and temperature changes. Upon this stick every single mass, be it near or far, exerts a directing force; but the wire upon which it hangs resists, and whilst resisting it twists, with the degree of this twist showing us the exact magnitude of the forces acting upon the stick. This is a Coulomb balance, and that is all there is to it. It is simple, like the flute of Hamlet, you only have to know how to play on it, and just like the musician who can delight you with splendid variations, the physicist can, on this balance, with no less delight determine the finest variations of gravity.}{\textit{Baron Loránd Eötvös}}
+
 \tableofcontents
 
 \setcounter{chapter}{-1}
-\chapter{History}
+\chapter{Brief History}
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+The torsion balance was invented independently by both Charles-Augustin de Coulomb (of Coulomb's law fame) in 1777 and John Michell in 1783 \cite{torsion}. Coulomb used the torsion balance to successfully measure the electric force and determined that it follows the inverse square of the distance. Michell on the other hand was planning to use his balance to measure the mass of the Earth but died before completing the experiment. Upon Michell's death, his torsion balance apparatus was passed on to Henry Cavendish. In 1798, Cavendish successfully determined the mass of the Earth and made the first direct measurement of the gravitational constant with Michell's torsion balance.
+
+These early successes set the torsion balance as a core instrument for experimental physics. This led to a series of experiments by Baron Loránd Eötvös in 1908 which confirmed the Equivalence Principle. \cite{EP} Eötvös's torsion balance apparatus is the precursor to most modern torsion balances and is widely used to prospect for minerals. The torsion balance was reinvigorated by Robert H. Dicke, P. G. Roll, and Robert Krotkov who in 1964 tested the Equivalence Principle to increased precision. This began a tradition of torsion balance test of the Equivalence Principle that continues to this day with Vladimir Braginsky and Vladimir Panov conducting a test in 1971 and the Eöt-Wash group being founded in 1987. 
+
+Although they were invented two and a half centuries ago, torsion balances are still on the forefront of experimental physics. They are still used to measure the gravitational constant and test the Equivalence Principle with increasing precision. This has expanded to a suite of cutting-edge tests including verification of Newton's inverse square law of gravity, searches for dark matter, early-earthquake warning, fifth-force searches, spin-coupled interactions, and more. The expertise in precision mechanics formed by these various experiments has influence a wide variety of instruments including gravitational wave observatories and seismology instrumentation. The torsion balance may be the most persistently used instrument for physicists other than the human eye and brain.
+
 \chapter{Introduction}
 \section{Simple Torsion Balance}\label{simple}
 
@@ -42,7 +70,7 @@ where $\theta_0$ is the equilibrium angle of the torsion balance. For most situa
 
 Due to historical reasons, the classical example of a torsion balance is a dumb-bell shaped pendulum suspended from a thin metal fiber, shown in Figure~\ref{simpleFig}. The pendulum is formed by a massless rod with two equal mass "test masses" attached to each end. The torsion fiber is then attached to the rod at equal distance to each test mass. This provides a prototypical model of a torsion balance which we will analyze in detail. Modern torsional balance apparatus typically have pendulums with more complex geometry and may have multiple suspension stages. 
 
-\section{Loss Terms}\ref{loss}
+\section{Loss Terms}\label{loss}
 
 \quad There are two primary sources of loss in torsion balances: external and internal damping. External damping, sometimes called velocity damping, is caused by external forces acting on the pendulum that are proportional to the angular velocity of the pendulum, such as air friction. Internal damping, on the other hand, is caused by energy dissipation internal to the torsion fiber.
 
@@ -557,18 +585,32 @@ Roughing pumps are the only pumps that can handle starting at atmospheric pressu
 
 \section{Gravity Gradients}\label{gravGrad}
 
-\cite{gravGrad}
+Most spurious effects that act on torsion balances can be shielded away; gravity is the exception. As there is only positive mass, the gravitational field can not be decreased with the introduction of material between the torsion balance and the environment. Every mass in the universe pulls on the torsion balance. However, the gravitational force falls off with the square of distance. This can be seen in Newton's law of gravity between point masses:
+\begin{equation}
+F=\frac{G m_1 m_2}{r^2}
+\end{equation}
+where $G =6.67\times10^{-11}\ \text{m}^3/(\text{kg}\ \text{s}^2)$ is the gravitational constant, $m_1$ and $m_2$ are the masses of the two point mass, and $r$ is the distance between them. 
+
+Torsion balances are mainly sensitive to torques acting on the pendulum. A uniform gravitational force acting on the pendulum would produce no net torque. However, spatial variations of the gravitational field (i.e. gravity gradients) over the geometry of the pendulum could pull on one side more than the other and thus cause torques. 
+
+For many applications, the static torque is of little importance. One would expect that the gravity gradients would then be of equally little importance. Yet, our world is full of moving masses. People come and go, the atmospheric pressure changes, rain falls and saturates the ground, etc. All of the moving substances in the vicinity of the apparatus combine to cause gravity gradients that change in time. Thus essentially every torsion balance must account for these effects.\footnote{Although here we treat gravity gradients as a noise source, in some experiment the gravity gradient is the signal of interest. Measuring the gravity gradient is a superb way to measure the mass of objects that can not be readily accessed such as minerals in the ground or sea ice in the arctic.}
+
+The zeroth order method to minimize the effect of gravity gradients is to minimize the amount of moving masses in the laboratory that houses the apparatus. This can be achieved by restricting person access to the immediate area, maintaining the location of all large pieces of equipment in the lab, and even locating the apparatus far from activity such as an underground mine or bunker.
+
+One can limit human activity but nothing stops the wind from blowing and the rain from falling. To decrease the gravity gradient effects further, a torsion balance pendulum must be designed in such a way to minimize its couplings to the gravity gradients. To quantify this we break the gravitational potential into the sum of multipole moment: \cite{gravGrad}
 \begin{equation}
 V=-4\pi G \sum_{l=0}^\infty \sum_{m=-l}^{l} \frac{1}{2l+1} q_{lm} Q_{lm}
 \end{equation}
-
+where $q_{lm}$ and $Q_{lm}$ are respectively the inner and outer multipole moments which are defined as:
 \begin{equation}
-q_{lm}=\int \rho(\vec{r})\ r^l\ Y^*_{lm}(\theta, \phi)dV
+q_{lm}=\int \rho(\vec{r})\ r^l\ Y^*_{lm}(\theta, \phi)\ dV
 \end{equation}
-
 \begin{equation}
-Q_{lm}=\int \rho(\vec{r})\ r^{-(l+1)}\ Y_{lm}(\theta, \phi)dV
+Q_{lm}=\int \rho(\vec{r})\ r^{-(l+1)}\ Y_{lm}(\theta, \phi)\ dV
 \end{equation}
+where $\rho(\vec{r})$ is the density at position $\vec{r}$, and $Y_{lm}(\theta, \phi)$ is the $l$,$m$ spherical harmonic. The inner moments represent the pendulum and the outer represent the environment. As the spherical harmonics are orthogonal, only moments with matching $l$ and $m$ couple together. This allows the geometry of the pendulum to dictate the influence of gravity gradients. A clever experimenter with the aid of detailed calculations can devise pendulum geometries with minimal gravitational moments. Note that the larger $l$ outer moments fall off with higher powers of the distance. This causes the lower $l$ moments to dominate the interaction.
+
+In addition to minimizing the pendulum moments, experimenters can install masses which counter act the environmental moments to effectively flatten out the gravitational field. This is important for rotating experiments where all environmental masses are effectively spinning around the torsion balance.
 
 \chapter{Data Analysis Techniques}
 \section{Fourier Analysis}
@@ -647,13 +689,13 @@ Realistic spectra can be significantly more complicated than the one analyzed he
 
 \section{Linear Least-Squares Fitting}
 
-\quad Although Fourier analysis is often used to analyze the data from an apparatus, extracting accurate measurements from a spectrum can be troublesome. The amplitudes pulled off a spectrum must be corrected for a handful of effects in order to yield accurate results. This alleviated by deploying linear least-squares fitting.
+\quad Although Fourier analysis is often used to analyze the data from an apparatus, extracting accurate measurements from a spectrum can be troublesome. The amplitudes pulled off a spectrum must be corrected for a handful of effects in order to yield accurate results. This is alleviated by deploying linear least-squares fitting.
 
-Whenever an experimenter goes about fitting data, they are minimizing some sort of error function. There are many choices from depending on the application but the one widely used in torsion balance experiments is the least-squares. Let's say we want to fit data set, $y(t_i)$, that is $n$-points long to the linear combination of $m$ functions, $f(t_i)_m$. The fit approximation the data set would be:
+Whenever an experimenter goes about fitting data, they are minimizing some sort of error function. There are many choices to choose from depending on the application but the one widely used in torsion balance experiments is the least-squares. Let's say we want to fit a data set, $y(t_i)$, that is $n$-points long to the linear combination of $m$ functions, $f_m(t_i)$. The fit approximation would be:
 \begin{equation}
 \hat{y}(t_i)=\sum_m a_m f_m(t_i)\label{hat}
 \end{equation} 
-where $\hat{y}$ is the fit approximation of the data and $a_m$ are the weights. To make the mathematics easier, we can vectorize Equation \ref{hat} by defining the following:
+where $\hat{y}$ is the approximation of the data and $a_m$ are the weights. To make the mathematics easier, we can vectorize Equation \ref{hat} by defining the following:
 \begin{align}
 \vec{y}&=[y(t_1)\ y(t_1)\ ...\ y(t_n)]\\
 \vec{w}&=[a_1\ a_2\ ...\ a_m]\\
@@ -666,7 +708,8 @@ A good fit is defined as the fit that minimizes the least-squares error:
 \begin{equation}
 \epsilon = \big(\vec{y}-\hat{\vec{y}} \big)^2 \ =\big(\vec{y}-\vec{w}\ \mathbf{X} \big)^2 \label{ls}
 \end{equation} 
-Once we choose the functions that we want to fit to the only parameter that can vary in Equation \ref{ls} is $\vec{w}$. Thus to find the fit that minimizes the least-squares error we can differentiate Equation \ref{ls} with respect to $\vec{w}$ and setting it to zero. Then solving for $\vec{w}$ simplifies to the following: 
+
+Once we choose the functions that we want to fit to, the only parameter that can vary in Equation \ref{ls} is $\vec{w}$. Thus to find the fit that minimizes the least-squares error, we can differentiate Equation \ref{ls} with respect to $\vec{w}$ and set it to zero. Then solving for $\vec{w}$ simplifies to the following: 
 \begin{equation}
 \vec{w} = \big(\mathbf{X}^T \mathbf{X} \big)^{-1}\ \mathbf{X}^T\vec{y} \label{lls}
 \end{equation} 

@@ -1,26 +1,26 @@
-\contentsline {chapter}{\numberline {0}History}{5}% 
-\contentsline {chapter}{\numberline {1}Introduction}{7}% 
-\contentsline {section}{\numberline {1.1}Simple Torsion Balance}{7}% 
-\contentsline {section}{\numberline {1.2}Loss Terms}{8}% 
-\contentsline {section}{\numberline {1.3}Equations of Motion}{9}% 
-\contentsline {section}{\numberline {1.4}Response Function}{9}% 
-\contentsline {chapter}{\numberline {2}Mechanics}{11}% 
-\contentsline {section}{\numberline {2.1}Torque Sensing}{11}% 
-\contentsline {section}{\numberline {2.2}Inertial Sensing}{12}% 
-\contentsline {section}{\numberline {2.3}Fiber Engineering}{13}% 
-\contentsline {section}{\numberline {2.4}Pendulum Design}{16}% 
-\contentsline {chapter}{\numberline {3}Complications}{19}% 
-\contentsline {section}{\numberline {3.1}Swing Modes}{19}% 
-\contentsline {section}{\numberline {3.2}Centrifugal Force}{21}% 
-\contentsline {chapter}{\numberline {4}Noise Sources and Mitigation}{25}% 
-\contentsline {section}{\numberline {4.1}Thermal Noise}{25}% 
-\contentsline {section}{\numberline {4.2}Readout Noise}{26}% 
-\contentsline {section}{\numberline {4.3}Seismic Motion}{28}% 
-\contentsline {section}{\numberline {4.4}Electrostatic Couplings}{30}% 
-\contentsline {section}{\numberline {4.5}Magnetic Interactions}{32}% 
-\contentsline {section}{\numberline {4.6}Temperature Variations}{32}% 
-\contentsline {section}{\numberline {4.7}Gas Damping}{33}% 
-\contentsline {section}{\numberline {4.8}Gravity Gradients}{34}% 
-\contentsline {chapter}{\numberline {5}Data Analysis Techniques}{37}% 
-\contentsline {section}{\numberline {5.1}Fourier Analysis}{37}% 
-\contentsline {section}{\numberline {5.2}Linear Least-Squares Fitting}{40}% 
+\contentsline {chapter}{\numberline {0}Brief History}{1}{chapter.0}%
+\contentsline {chapter}{\numberline {1}Introduction}{3}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Simple Torsion Balance}{3}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Loss Terms}{4}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Equations of Motion}{5}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Response Function}{5}{section.1.4}%
+\contentsline {chapter}{\numberline {2}Mechanics}{7}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Torque Sensing}{7}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Inertial Sensing}{8}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Fiber Engineering}{9}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Pendulum Design}{12}{section.2.4}%
+\contentsline {chapter}{\numberline {3}Complications}{15}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Swing Modes}{15}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Centrifugal Force}{17}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Noise Sources and Mitigation}{21}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Thermal Noise}{21}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Readout Noise}{22}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Seismic Motion}{24}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Electrostatic Couplings}{26}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Magnetic Interactions}{27}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Temperature Variations}{28}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Gas Damping}{29}{section.4.7}%
+\contentsline {section}{\numberline {4.8}Gravity Gradients}{30}{section.4.8}%
+\contentsline {chapter}{\numberline {5}Data Analysis Techniques}{33}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Fourier Analysis}{33}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Linear Least-Squares Fitting}{36}{section.5.2}%
